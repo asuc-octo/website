@@ -5,6 +5,8 @@ const config = require('./meta/config')
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
+const pixelstorem = require('postcss-pixels-to-rem')
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -167,6 +169,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [pixelstorem()],
+      },
+    },
   ],
 }
-

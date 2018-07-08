@@ -1,0 +1,19 @@
+.Link
+{
+  color: $link-color-primary;
+
+  &:hover
+  {
+    color: $link-color-hover;
+  }
+
+  &:active
+  {
+    color: $link-color-active;
+  }
+
+  &:visited
+  {
+    color: $link-color-visited;
+  }
+}

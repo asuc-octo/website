@@ -1,0 +1,27 @@
+$brand-primary: #2e73f5 !default;
+$brand-primary-light: #3669cc !default;
+$brand-secondary: #ff2f97 !default;
+$brand-secondary-light: #ff71b8 !default;
+$brand-tertiary: #6ede6e !default;
+
+$brand-dark-grey: #2c2c2c !default;
+$brand-light-grey: #c9c9c9 !default;
+
+$link-color-primary: $brand-primary !default;
+$link-color-hover: $brand-primary-light !default;
+$link-color-active: $brand-primary !default;
+$link-color-visited: $link-color-primary !default;
+
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-family-primary: 'Barlow', Arial, sans-serif !default;
+
+$screen-xs-min: 480px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
