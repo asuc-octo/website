@@ -1,9 +1,6 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-const config = require('./meta/config')
+const config = require('./meta/config');
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
 module.exports = {
   siteMetadata: {
@@ -98,10 +95,10 @@ module.exports = {
       resolve: 'gatsby-plugin-feed',
       options: {
         setup (ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark
-          ret.generator = 'GatsbyJS Business Starter'
-          return ret
+          const ret = ref.query.site.siteMetadata.rssMetadata;
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+          ret.generator = 'GatsbyJS Business Starter';
+          return ret;
         },
         query: `
                     {
@@ -123,7 +120,7 @@ module.exports = {
         feeds: [
           {
             serialize (ctx) {
-              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
               return ctx.query.allMarkdownRemark.edges
                 .filter(edge => edge.node.frontmatter.templateKey === 'article-page')
                 .map(edge => ({
@@ -135,7 +132,7 @@ module.exports = {
                   url: rssMetadata.site_url + edge.node.fields.slug,
                   guid: rssMetadata.site_url + edge.node.fields.slug,
                   custom_elements: [{'content:encoded': edge.node.html}],
-                }))
+                }));
             },
             query: `
                             {
@@ -167,5 +164,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography.js',
+      },
+    },
   ],
-}
+};
