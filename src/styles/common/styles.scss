@@ -30,6 +30,7 @@ nav
   margin-top: 0 !important;
 }
 
-@import "~bulma";
 @import "./variables";
+@import "~bulma";
 @import "./module";
+@import "./mixins";

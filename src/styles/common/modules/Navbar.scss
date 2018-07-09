@@ -1,0 +1,15 @@
+.Navbar
+{
+  margin: $spaced-margin * 2 $spaced-margin * 4 0;
+
+  &-item
+  {
+    font-family: $font-family-primary;
+  }
+
+  &-brand
+  {
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+  }
+}
