@@ -3,26 +3,26 @@ import Link from 'gatsby-link';
 
 const NavBar = () => {
   return (
-    <nav className='Navbar navbar' aria-label='main navigation'>
-      <div className='Navbar-brand navbar-brand'>
-        <Link to='/' className='Navbar-item navbar-item'>
+    <nav className='navbar is-transparent' aria-label='main navigation'>
+      <div className='navbar-brand'>
+        <Link to='/' className='navbar-item'>
           ASUC OCTO
         </Link>
-        <button className='Navbar-burger button navbar-burger' data-target='navMenu'>
+        <button className='button navbar-burger' data-target='navMenu'>
           <span />
           <span />
           <span />
         </button>
       </div>
-      <div className='Navbar-menu navbar-menu' id='navMenu'>
-        <div className='Navbar-end navbar-end'>
-          <Link className='Navbar-item navbar-item' to='/pricing'>
+      <div className='navbar-menu' id='navMenu'>
+        <div className='navbar-end'>
+          <Link className='navbar-item' to='/pricing'>
             About
           </Link>
-          <Link className='Navbar-item navbar-item' to='/about'>
+          <Link className='navbar-item' to='/about'>
             Projects
           </Link>
-          <Link className='Navbar-item navbar-item' to='/blog'>
+          <Link className='navbar-item' to='/blog'>
             Recruitment
           </Link>
         </div>

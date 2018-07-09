@@ -1,5 +1,6 @@
-.Navbar
+.navbar
 {
+  font-size: 20px;
   @include desktop
   {
     margin: $spaced-margin * 2 $spaced-margin * 4 0;
@@ -12,6 +13,10 @@
 
   &-brand
   {
+    @include desktop
+    {
+      margin-left: $spaced-margin * 2;
+    }
     font-family: $font-family-primary;
     font-weight: $font-weight-bold;
   }
