@@ -1,6 +1,9 @@
 .Navbar
 {
-  margin: $spaced-margin * 2 $spaced-margin * 4 0;
+  @include desktop
+  {
+    margin: $spaced-margin * 2 $spaced-margin * 4 0;
+  }
 
   &-item
   {
