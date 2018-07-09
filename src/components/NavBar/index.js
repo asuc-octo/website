@@ -1,18 +1,18 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const NavBar = () => {
+const NavBar = ({ className }) => {
   return (
-    <nav className='navbar is-transparent' aria-label='main navigation'>
+    <nav className={'navbar is-transparent ' + (className || '')} aria-label='main navigation'>
       <div className='navbar-brand'>
         <Link to='/' className='navbar-item'>
           ASUC OCTO
         </Link>
-        <button className='button navbar-burger' data-target='navMenu'>
+        <span className='navbar-burger burger' data-target='navMenu'>
           <span />
           <span />
           <span />
-        </button>
+        </span>
       </div>
       <div className='navbar-menu' id='navMenu'>
         <div className='navbar-end'>

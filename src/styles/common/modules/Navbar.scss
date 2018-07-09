@@ -1,6 +1,8 @@
 .navbar
 {
   font-size: 20px;
+  border-bottom: lightgray solid 0.1vmin;
+
   @include desktop
   {
     margin: $spaced-margin * 2 $spaced-margin * 4 0;
@@ -19,5 +21,10 @@
     }
     font-family: $font-family-primary;
     font-weight: $font-weight-bold;
+  }
+
+  &-header
+  {
+    border-bottom: none;
   }
 }

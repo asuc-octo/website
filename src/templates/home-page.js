@@ -1,11 +1,9 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Offerings from '../components/Offerings'
-import Testimonials from '../components/Testimonials'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import NavBar from '../components/NavBar';
+import Offerings from '../components/Offerings';
+import Testimonials from '../components/Testimonials';
 
 export const HomePageTemplate = ({
   title,
@@ -21,21 +19,21 @@ export const HomePageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <section className='hero is-primary is-bold'>
+
+    <section className='hero is-primary is-fullheight'>
+      <NavBar className='navbar-header' />
       <div className='hero-body'>
         <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
-              </div>
-            </div>
-          </div>
+          <h1 className='title'>
+            ASUC OCTO CHANGE
+          </h1>
+          <h2 className='subtitle'>
+            We build accessible, free software for Berkeley students. Change
+          </h2>
         </div>
       </div>
     </section>
+
     <section className='section section--gradient'>
       <div className='container'>
 
@@ -59,7 +57,7 @@ export const HomePageTemplate = ({
       </div>
     </section>
   </div>
-)
+);
 
 HomePageTemplate.propTypes = {
   title: PropTypes.string,
@@ -72,10 +70,10 @@ HomePageTemplate.propTypes = {
   }),
   testimonials: PropTypes.array,
 
-}
+};
 
 const HomePage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+  const {frontmatter} = data.markdownRemark;
 
   return (
     <HomePageTemplate
@@ -87,8 +85,8 @@ const HomePage = ({data}) => {
       offerings={frontmatter.offerings}
       testimonials={frontmatter.testimonials}
     />
-  )
-}
+  );
+};
 
 HomePage.propTypes = {
   data: PropTypes.shape({
@@ -96,9 +94,9 @@ HomePage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default HomePage
+export default HomePage;
 
 export const pageQuery = graphql`
   query IndexPage($id: String!) {
@@ -122,4 +120,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
