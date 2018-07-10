@@ -41,4 +41,12 @@ const Hero = ({
   );
 };
 
+Hero.PropTypes = {
+  baseClass: PropTypes.String,
+  isFullHeight: PropTypes.Boolean,
+  titleText: PropTypes.String,
+  subtitleText: PropTypes.String,
+  buttons: PropTypes.array,
+};
+
 export default Hero;
