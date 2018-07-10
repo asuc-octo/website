@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 const NavBar = ({ className }) => {
   return (
-    <nav className={'navbar is-transparent ' + (className || '')} aria-label='main navigation'>
+    <nav className={'navbar is-transparent container ' + (className || '')} aria-label='main navigation'>
       <div className='navbar-brand'>
         <Link to='/' className='navbar-item'>
           ASUC OCTO

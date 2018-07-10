@@ -1,12 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import NavBar from '../components/NavBar';
+import Hero from '../components/Hero';
 import Offerings from '../components/Offerings';
 import Testimonials from '../components/Testimonials';
+import '../styles/common/styles.scss';
+import '../styles/home/styles.scss';
+
+let buttons = [
+  {
+    text: 'Learn More',
+    to: '#',
+  },
+  {
+    text: 'Recruitment',
+    to: '#',
+  },
+];
 
 export const HomePageTemplate = ({
   title,
+  subtitle,
   heading,
   description,
   offerings,
@@ -20,31 +34,13 @@ export const HomePageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
 
-    <section className='hero hero-backgroundImage is-primary is-fullheight'>
-      <NavBar className='navbar-header' />
-      <div className='hero-body'>
-        <div className='hero-container container'>
-          <div className='columns'>
-            <h1 className='hero-title title is-spaced has-text-weight-bold'>
-              ASUC OCTO
-            </h1>
-          </div>
-          <div className='columns'>
-            <h2 className='hero-subtitle subtitle column is-one-third'>
-              We build accessible, free software for Berkeley students.
-            </h2>
-          </div>
-          <div className='columns'>
-            <button className='hero-button button is-inverted is-primary is-rounded'>
-              Learn More
-            </button>
-            <button className='hero-button button is-inverted is-outlined is-primary is-rounded'>
-              Recruitment
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Hero
+      baseClass='homePage'
+      isFullHeight
+      titleText={title}
+      subtitleText={subtitle}
+      buttons={buttons}
+    />
 
     <section className='section section--gradient'>
       <div className='container'>
@@ -73,6 +69,7 @@ export const HomePageTemplate = ({
 
 HomePageTemplate.propTypes = {
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   heading: PropTypes.string,
@@ -90,6 +87,7 @@ const HomePage = ({data}) => {
   return (
     <HomePageTemplate
       title={frontmatter.title}
+      subtitle={frontmatter.subtitle}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
       heading={frontmatter.heading}
@@ -115,6 +113,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        subtitle
         meta_title
         meta_description
         heading

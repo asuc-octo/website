@@ -1,0 +1,76 @@
+.hero-homePage.hero
+{
+  &-backgroundImage
+  {
+    background: -webkit-linear-gradient(left, #546bdb, #45b23f);
+    background: -o-linear-gradient(left, #546bdb, #45b23f);
+    background: linear-gradient(to right, #546bdb, #45b23f);
+  }
+
+  .hero
+  {
+    color: white;
+
+    &-title
+    {
+      color: white;
+    }
+
+    &-subtitle
+    {
+      color: white;
+      margin: 1rem 0;
+      max-width: 400px;
+    }
+
+    &-button
+    {
+      border-radius: 20px;
+      padding: $padded-padding / 2 $padded-padding;
+    }
+
+    &-button:first-child
+    {
+      background-color: white;
+      border: 2px solid white;
+      color: $brand-primary;
+      margin-right: $spaced-margin / 2;
+
+      &:hover
+      {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+    }
+
+    &-button:nth-child(2)
+    {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      margin-left: $spaced-margin / 2;
+
+      &:hover
+      {
+        background-color: white;
+        border: 2px solid white;
+        color: $brand-primary;
+      }
+    }
+
+    &-navbar
+    {
+      border-bottom: none;
+
+      .navbar
+      {
+        &-item
+        {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
