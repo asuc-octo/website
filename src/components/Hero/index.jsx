@@ -13,8 +13,7 @@ const Hero = ({
   return (
     <section className={'hero hero-backgroundImage ' +
       (baseClass && `hero-${baseClass} `) +
-      (isFullHeight && 'is-fullheight ')}
-    >
+      (isFullHeight && 'is-fullheight ')}>
       <NavBar className='hero-navbar' />
       <div className='hero-body'>
         <div className='hero-container container'>

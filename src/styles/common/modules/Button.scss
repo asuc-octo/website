@@ -1,11 +1,9 @@
 @mixin Button
 {
-  display: inline-block;
-  height: 25px;
   font-family: $font-family-primary;
   font-weight: $font-weight-regular;
   border: 2px solid $brand-primary;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 6px 14px;
 }
 

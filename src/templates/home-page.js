@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
+import Promo from '../components/Promo';
 import Offerings from '../components/Offerings';
 import Testimonials from '../components/Testimonials';
 import '../styles/common/styles.scss';
 import '../styles/home/styles.scss';
+
+// Pull from markdown later
 
 let buttons = [
   {
@@ -27,6 +30,7 @@ export const HomePageTemplate = ({
   meta_title,
   meta_description,
   testimonials,
+  promo,
 }) => (
   <div>
     <Helmet>
@@ -40,6 +44,16 @@ export const HomePageTemplate = ({
       titleText={title}
       subtitleText={subtitle}
       buttons={buttons}
+    />
+
+    <Promo
+      baseClass='homePage'
+      promoImageURL={promo.image}
+      title={promo.title}
+      description={promo.description}
+      linkText={promo.linkText}
+      linkUrl={promo.linkTo}
+      imageColumns={5}
     />
 
     <section className='section section--gradient'>
@@ -74,6 +88,7 @@ HomePageTemplate.propTypes = {
   meta_description: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
+  promo: PropTypes.object,
   offerings: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -92,6 +107,7 @@ const HomePage = ({data}) => {
       meta_description={frontmatter.meta_description}
       heading={frontmatter.heading}
       description={frontmatter.description}
+      promo={frontmatter.promo}
       offerings={frontmatter.offerings}
       testimonials={frontmatter.testimonials}
     />
@@ -118,6 +134,13 @@ export const pageQuery = graphql`
         meta_description
         heading
         description
+        promo {
+          image
+          title
+          description
+          linkText
+          linkTo
+        }
         offerings {
           blurbs {
             image
