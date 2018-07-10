@@ -20,16 +20,28 @@ export const HomePageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
 
-    <section className='hero is-primary is-fullheight'>
+    <section className='hero hero-backgroundImage is-primary is-fullheight'>
       <NavBar className='navbar-header' />
       <div className='hero-body'>
-        <div className='container'>
-          <h1 className='title'>
-            ASUC OCTO CHANGE
-          </h1>
-          <h2 className='subtitle'>
-            We build accessible, free software for Berkeley students. Change
-          </h2>
+        <div className='hero-container container'>
+          <div className='columns'>
+            <h1 className='hero-title title is-spaced has-text-weight-bold'>
+              ASUC OCTO
+            </h1>
+          </div>
+          <div className='columns'>
+            <h2 className='hero-subtitle subtitle column is-one-third'>
+              We build accessible, free software for Berkeley students.
+            </h2>
+          </div>
+          <div className='columns'>
+            <button className='hero-button button is-inverted is-primary is-rounded'>
+              Learn More
+            </button>
+            <button className='hero-button button is-inverted is-outlined is-primary is-rounded'>
+              Recruitment
+            </button>
+          </div>
         </div>
       </div>
     </section>
