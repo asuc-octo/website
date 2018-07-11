@@ -1,5 +1,5 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
 const Promo = ({
@@ -26,7 +26,9 @@ const Promo = ({
               <h2 className='promo-title'>{title}</h2>
               <p className='promo-description'>{description}</p>
               <div className='promo-linkWrapper'>
-                <Link className='promo-button button' to={linkUrl}>{linkText}</Link>
+                <Link className='promo-button button' to={linkUrl}>
+                  {linkText}
+                </Link>
               </div>
             </div>
           </div>
@@ -36,13 +38,13 @@ const Promo = ({
   );
 };
 
-Promo.Proptypes = {
-  className: Proptypes.String,
-  promoImage: Proptypes.Element,
-  title: Proptypes.String,
-  description: Proptypes.String,
-  linkText: Proptypes.String,
-  linkUrl: Proptypes.String,
+Promo.propTypes = {
+  baseClass: PropTypes.string,
+  promoImageURL: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  linkText: PropTypes.string,
+  linkUrl: PropTypes.string,
 };
 
 export default Promo;

@@ -1,6 +1,6 @@
-.promo-homePage.promo
+.products-homePage.products
 {
-  .promo
+  .products
   {
     &-title
     {
@@ -13,15 +13,18 @@
       white-space: pre-line;
     }
 
+    &-linkWrapper
+    {
+      display: flex;
+      justify-content: center;
+    }
+
     &-button
     {
       @extend .Button;
       @extend .Button--inverted;
-    }
 
-    &-content
-    {
-      padding: 0 $padded-padding * 2;
+      @extend .is-centered;
     }
   }
 }

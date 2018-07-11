@@ -3,12 +3,38 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
 import Promo from '../components/Promo';
+import Products from '../components/Products';
 import Offerings from '../components/Offerings';
 import Testimonials from '../components/Testimonials';
-import '../styles/common/styles.scss';
 import '../styles/home/styles.scss';
 
+let baseClass = 'homePage';
+
 // Pull from markdown later
+let productsTitle = 'Projects';
+let productsDescription = 'Right now, we’re working on four exciting projects: Berkeley Mobile, Berkeley Time, Hermione, and Digital Service.';
+let productsLinkText = 'View our projects';
+let productsLinkUrl = '#';
+let products = [
+  {
+    title: 'BerkeleyTime',
+    description: "Berkeley's most popular course catalog",
+    imgUrl: '/img/coffee-gear.png',
+    linkUrl: '/',
+  },
+  {
+    title: 'Berkeley Mobile',
+    description: "Berkeley's most online course",
+    imgUrl: '/img/coffee-gear.png',
+    linkUrl: '/',
+  },
+  {
+    title: 'BerkeleyTime',
+    description: "Berkeley's most popular course catalog",
+    imgUrl: '/img/coffee-gear.png',
+    linkUrl: '/',
+  },
+];
 
 let buttons = [
   {
@@ -39,7 +65,7 @@ export const HomePageTemplate = ({
     </Helmet>
 
     <Hero
-      baseClass='homePage'
+      baseClass={baseClass}
       isFullHeight
       titleText={title}
       subtitleText={subtitle}
@@ -47,7 +73,7 @@ export const HomePageTemplate = ({
     />
 
     <Promo
-      baseClass='homePage'
+      baseClass={baseClass}
       promoImageURL={promo.image}
       title={promo.title}
       description={promo.description}
@@ -56,28 +82,38 @@ export const HomePageTemplate = ({
       imageColumns={5}
     />
 
-    <section className='section section--gradient'>
-      <div className='container'>
-
-        <div className='section'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <div>
-                  <h3 className='has-text-weight-semibold is-size-2'>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
+    <Products
+      baseClass={baseClass}
+      title={productsTitle}
+      description={productsDescription}
+      linkText={productsLinkText}
+      linkUrl={productsLinkUrl}
+      products={products}
+      productColSize='one-third'
+    />
+    {false &&
+      <section className='section section--gradient'>
+        <div className='container'>
+          <div className='section'>
+            <div className='columns'>
+              <div className='column is-10 is-offset-1'>
+                <div className='content'>
+                  <div>
+                    <h3 className='has-text-weight-semibold is-size-2'>
+                      {heading}
+                    </h3>
+                    <p>{description}</p>
+                  </div>
+                  <Offerings gridItems={offerings.blurbs} />
+                  <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
+                  <Testimonials testimonials={testimonials} />
                 </div>
-                <Offerings gridItems={offerings.blurbs} />
-                <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
-                <Testimonials testimonials={testimonials} />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    }
   </div>
 );
 

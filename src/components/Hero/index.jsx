@@ -40,7 +40,7 @@ const Hero = ({
   );
 };
 
-Hero.PropTypes = {
+Hero.propTypes = {
   baseClass: PropTypes.String,
   isFullHeight: PropTypes.Boolean,
   titleText: PropTypes.String,

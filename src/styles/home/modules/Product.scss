@@ -1,0 +1,25 @@
+.products-homePage.products
+{
+  .product
+  {
+    padding: $padded-padding * 3 $padded-padding * 2;
+    margin: $spaced-margin * 3  0;
+
+    background: linear-gradient(#2e73f5, #ffa7d3);
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h3;
+
+      text-align: center;
+      color: white;
+    }
+
+    &-description
+    {
+      text-align: center;
+      color: white;
+    }
+  }
+}
