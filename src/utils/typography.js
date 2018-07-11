@@ -21,7 +21,9 @@ const typography = new Typography({
   bodyColor: '#2c2c2c',
   bodyWeight: '400',
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    // More styles here
+    p: {
+      lineHeight: 2,
+    },
   }),
 });
 

@@ -6,6 +6,7 @@ $brand-tertiary: #6ede6e !default;
 
 $brand-dark-grey: #2c2c2c !default;
 $brand-light-grey: #c9c9c9 !default;
+$grey-background: #f4f4f4 !default;
 
 $link-color-primary: $brand-primary !default;
 $link-color-hover: $brand-primary-light !default;
@@ -39,5 +40,7 @@ $family-primary: $font-family-primary;
 $navbar-height: 55px;
 $navbar-item-color: $brand-dark-grey;
 $navbar-item-hover-color: $brand-primary;
+
+$section-padding: 4rem 1.5rem;
 
 $footer-background-color: $brand-primary-light;

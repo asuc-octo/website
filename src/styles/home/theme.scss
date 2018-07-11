@@ -1,1 +1,4 @@
-//Themes here
+.section:nth-child(2n)
+{
+  background-color: $grey-background;
+}
