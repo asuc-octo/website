@@ -9,10 +9,11 @@ module.exports = {
   siteFBAppID: '', // FB Application ID for using app insights
   googleTagManagerID: '', // GTM tracking ID.
   disqusShortname: 'gatsby-business-starter', // Disqus
+  userName: 'ASUC OCTO',
   userTwitter: 'vaibhaved',
   userLocation: 'Berkeley, California',
   userDescription: '',
   copyright: 'Copyright © ASUC Office of the CTO 2018.',
-  // themeColor: '#00d1b2',
-  // backgroundColor: '#ffffff';
-}
+  themeColor: '#2e73f5',
+  backgroundColor: '#ffffff',
+};
