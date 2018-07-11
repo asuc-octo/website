@@ -11,30 +11,6 @@ import '../styles/home/styles.scss';
 let baseClass = 'homePage';
 
 // Pull from markdown later
-let productsTitle = 'Projects';
-let productsDescription = 'Right now, we’re working on four exciting projects: Berkeley Mobile, Berkeley Time, Hermione, and Digital Service.';
-let productsLinkText = 'View our projects';
-let productsLinkUrl = '#';
-let products = [
-  {
-    title: 'BerkeleyTime',
-    description: "Berkeley's most popular course catalog",
-    imgUrl: '/img/coffee-gear.png',
-    linkUrl: '/',
-  },
-  {
-    title: 'Berkeley Mobile',
-    description: "Berkeley's most online course",
-    imgUrl: '/img/coffee-gear.png',
-    linkUrl: '/',
-  },
-  {
-    title: 'BerkeleyTime',
-    description: "Berkeley's most popular course catalog",
-    imgUrl: '/img/coffee-gear.png',
-    linkUrl: '/',
-  },
-];
 
 let buttons = [
   {
@@ -52,11 +28,12 @@ export const HomePageTemplate = ({
   subtitle,
   heading,
   description,
-  offerings,
   meta_title,
   meta_description,
-  testimonials,
   promo,
+  products,
+  offerings,
+  testimonials,
 }) => (
   <div>
     <Helmet>
@@ -84,11 +61,11 @@ export const HomePageTemplate = ({
 
     <Products
       baseClass={baseClass}
-      title={productsTitle}
-      description={productsDescription}
-      linkText={productsLinkText}
-      linkUrl={productsLinkUrl}
-      products={products}
+      title={products.title}
+      description={products.description}
+      linkText={products.linkText}
+      linkUrl={products.linkTo}
+      products={products.products}
       productColSize='one-third'
     />
     {false &&
@@ -144,6 +121,7 @@ const HomePage = ({data}) => {
       heading={frontmatter.heading}
       description={frontmatter.description}
       promo={frontmatter.promo}
+      products={frontmatter.products}
       offerings={frontmatter.offerings}
       testimonials={frontmatter.testimonials}
     />
@@ -171,11 +149,23 @@ export const pageQuery = graphql`
         heading
         description
         promo {
+          title
+          description
           image
+          linkText
+          linkTo
+        }
+        products {
           title
           description
           linkText
           linkTo
+          products {
+            title
+            description
+            imgUrl
+            linkUrl
+          }
         }
         offerings {
           blurbs {
