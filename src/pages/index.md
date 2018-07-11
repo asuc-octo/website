@@ -37,6 +37,13 @@ products:
         Berkeley's most popular course catalog
       imgUrl: /img/coffee-gear.png
       linkUrl: /
+about:
+  title: Join Us
+  description: >-
+    Interested in web development, mobile development, product management or design? We’re looking for new members of the OCTO team! Click below to see our recruitment timeline.
+  linkText: Recruitment Process
+  linkTo: /
+
 
 heading: Lorem ipsum dolor sit amet
 description: >-

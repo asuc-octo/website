@@ -4,8 +4,11 @@ import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
 import Promo from '../components/Promo';
 import Products from '../components/Products';
+import About from '../components/About';
+
 import Offerings from '../components/Offerings';
 import Testimonials from '../components/Testimonials';
+
 import '../styles/home/styles.scss';
 
 let baseClass = 'homePage';
@@ -32,6 +35,7 @@ export const HomePageTemplate = ({
   meta_description,
   promo,
   products,
+  about,
   offerings,
   testimonials,
 }) => (
@@ -68,6 +72,15 @@ export const HomePageTemplate = ({
       products={products.products}
       productColSize='one-third'
     />
+
+    <About
+      baseClass={baseClass}
+      title={about.title}
+      description={about.description}
+      linkText={about.linkText}
+      linkUrl={about.linkTo}
+    />
+
     {false &&
       <section className='section section--gradient'>
         <div className='container'>
@@ -122,6 +135,7 @@ const HomePage = ({data}) => {
       description={frontmatter.description}
       promo={frontmatter.promo}
       products={frontmatter.products}
+      about={frontmatter.about}
       offerings={frontmatter.offerings}
       testimonials={frontmatter.testimonials}
     />
@@ -166,6 +180,12 @@ export const pageQuery = graphql`
             imgUrl
             linkUrl
           }
+        }
+        about {
+          title
+          description
+          linkText
+          linkTo
         }
         offerings {
           blurbs {
