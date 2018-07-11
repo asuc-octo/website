@@ -1,0 +1,25 @@
+.footer
+{
+  padding-bottom: 3rem;
+
+  &-copyright
+  {
+    color: white;
+  }
+
+  &-links
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-link a
+  {
+    color: white;
+  }
+
+  &-link
+  {
+    margin-bottom: $spaced-margin * 0.5;
+  }
+}
