@@ -21,4 +21,13 @@ const Product = ({
   );
 };
 
+Product.propTypes = {
+  baseClass: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  imgUrl: PropTypes.string,
+  linkUrl: PropTypes.string,
+  columnSize: PropTypes.number,
+};
+
 export default Product;

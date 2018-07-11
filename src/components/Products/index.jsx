@@ -42,4 +42,14 @@ const Products = ({
   );
 };
 
+Products.propTypes = {
+  baseClass: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  linkText: PropTypes.string,
+  linkUrl: PropTypes.string,
+  products: PropTypes.array,
+  productColSize: PropTypes.number,
+};
+
 export default Products;
