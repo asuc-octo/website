@@ -71,7 +71,6 @@ HomePageTemplate.propTypes = {
 };
 
 const HomePage = ({data}) => {
-  console.log(data);
   const {frontmatter} = data.markdownRemark;
 
   return (

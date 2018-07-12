@@ -27,7 +27,10 @@ Product.propTypes = {
   description: PropTypes.string,
   imgUrl: PropTypes.string,
   linkUrl: PropTypes.string,
-  columnSize: PropTypes.number,
+  columnSize: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 export default Product;

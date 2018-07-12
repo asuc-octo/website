@@ -28,8 +28,8 @@ const Hero = ({
             </h2>
           </div>
           <div className='columns column'>
-            {buttons.map(({text, to}, idx) => (
-              <Link to={to} className='hero-button button' key={idx}>
+            {buttons.map(({text, linkUrl}, idx) => (
+              <Link to={linkUrl} className='hero-button button' key={idx}>
                 {text}
               </Link>
             ))}
@@ -42,7 +42,7 @@ const Hero = ({
 
 Hero.propTypes = {
   baseClass: PropTypes.string,
-  isFullHeight: PropTypes.boolean,
+  isFullHeight: PropTypes.bool,
   titleText: PropTypes.string,
   subtitleText: PropTypes.string,
   buttons: PropTypes.array,

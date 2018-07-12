@@ -49,7 +49,10 @@ Products.propTypes = {
   linkText: PropTypes.string,
   linkUrl: PropTypes.string,
   products: PropTypes.array,
-  productColSize: PropTypes.number,
+  productColSize: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 export default Products;
