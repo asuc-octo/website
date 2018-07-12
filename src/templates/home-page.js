@@ -6,38 +6,19 @@ import Promo from '../components/Promo';
 import Products from '../components/Products';
 import About from '../components/About';
 
-import Offerings from '../components/Offerings';
-import Testimonials from '../components/Testimonials';
-
 import '../styles/home/styles.scss';
 
 let baseClass = 'homePage';
 
-// Pull from markdown later
-
-let buttons = [
-  {
-    text: 'Learn More',
-    to: '#',
-  },
-  {
-    text: 'Recruitment',
-    to: '#',
-  },
-];
-
 export const HomePageTemplate = ({
   title,
   subtitle,
-  heading,
-  description,
   meta_title,
   meta_description,
+  hero,
   promo,
   products,
   about,
-  offerings,
-  testimonials,
 }) => (
   <div>
     <Helmet>
@@ -50,7 +31,7 @@ export const HomePageTemplate = ({
       isFullHeight
       titleText={title}
       subtitleText={subtitle}
-      buttons={buttons}
+      buttons={hero.buttons}
     />
 
     <Promo
@@ -80,49 +61,17 @@ export const HomePageTemplate = ({
       linkText={about.linkText}
       linkUrl={about.linkTo}
     />
-
-    {false &&
-      <section className='section section--gradient'>
-        <div className='container'>
-          <div className='section'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='content'>
-                  <div>
-                    <h3 className='has-text-weight-semibold is-size-2'>
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                  <Offerings gridItems={offerings.blurbs} />
-                  <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
-                  <Testimonials testimonials={testimonials} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    }
   </div>
 );
 
 HomePageTemplate.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
   promo: PropTypes.object,
-  offerings: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  testimonials: PropTypes.array,
-
 };
 
 const HomePage = ({data}) => {
+  console.log(data);
   const {frontmatter} = data.markdownRemark;
 
   return (
@@ -131,13 +80,10 @@ const HomePage = ({data}) => {
       subtitle={frontmatter.subtitle}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
+      hero={frontmatter.hero}
       promo={frontmatter.promo}
       products={frontmatter.products}
       about={frontmatter.about}
-      offerings={frontmatter.offerings}
-      testimonials={frontmatter.testimonials}
     />
   );
 };
@@ -158,10 +104,15 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        heading
         meta_title
         meta_description
-        heading
-        description
+        hero {
+          buttons {
+            text
+            linkUrl
+          }
+        }
         promo {
           title
           description
@@ -186,16 +137,6 @@ export const pageQuery = graphql`
           description
           linkText
           linkTo
-        }
-        offerings {
-          blurbs {
-            image
-            text
-          }
-        }
-        testimonials {
-          author
-          quote
         }
       }
     }

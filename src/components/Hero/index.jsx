@@ -41,10 +41,10 @@ const Hero = ({
 };
 
 Hero.propTypes = {
-  baseClass: PropTypes.String,
-  isFullHeight: PropTypes.Boolean,
-  titleText: PropTypes.String,
-  subtitleText: PropTypes.String,
+  baseClass: PropTypes.string,
+  isFullHeight: PropTypes.boolean,
+  titleText: PropTypes.string,
+  subtitleText: PropTypes.string,
   buttons: PropTypes.array,
 };
 
