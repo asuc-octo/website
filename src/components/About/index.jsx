@@ -16,11 +16,13 @@ const About = ({
         <div className='content is-medium'>
           <h2 className='about-title'>{title}</h2>
           <p className='about-description'>{description}</p>
-          <div className='about-linkWrapper'>
-            <Link className='about-button button' to={linkUrl}>
-              {linkText}
-            </Link>
-          </div>
+          {linkText && linkUrl &&
+            <div className='about-linkWrapper'>
+              <Link className='about-button button' to={linkUrl}>
+                {linkText}
+              </Link>
+            </div>
+          }
         </div>
       </div>
     </section>
@@ -29,8 +31,8 @@ const About = ({
 
 About.propTypes = {
   baseClass: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.isRequired,
   linkText: PropTypes.string,
   linkUrl: PropTypes.string,
 };
