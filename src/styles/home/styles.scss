@@ -2,6 +2,9 @@
 @import "../common/styles.scss";
 
 //Local Styles
-@import "./mixins";
-@import "./module";
-@import "./theme";
+.homePage
+{
+  @import "./mixins";
+  @import "./module";
+  @import "./theme";
+}

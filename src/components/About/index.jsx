@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 
 const About = ({
   baseClass,
+  classModifier,
   title,
   description,
   linkUrl,
@@ -11,7 +12,9 @@ const About = ({
 }) => {
   return (
     <section className={'about section ' +
-      (baseClass && ('about-' + baseClass))}>
+      (baseClass && (`about-${baseClass} `)) +
+      (classModifier ? (`about--${classModifier} `) : '')
+    }>
       <div className='about-container container'>
         <div className='content is-medium'>
           <h2 className='about-title'>{title}</h2>
@@ -31,8 +34,9 @@ const About = ({
 
 About.propTypes = {
   baseClass: PropTypes.string,
+  classModifier: PropTypes.string,
   title: PropTypes.string.isRequired,
-  description: PropTypes.isRequired,
+  description: PropTypes.string.isRequired,
   linkText: PropTypes.string,
   linkUrl: PropTypes.string,
 };

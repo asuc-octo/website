@@ -18,7 +18,7 @@ export const HomePageTemplate = ({
   products,
   about,
 }) => (
-  <div>
+  <div className={baseClass}>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />

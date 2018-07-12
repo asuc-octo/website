@@ -1,0 +1,36 @@
+.about-aboutPage.about
+{
+  .about
+  {
+    &-container
+    {
+      max-width: 50rem;
+    }
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+
+      text-align: center;
+    }
+
+    &-description
+    {
+      white-space: pre-line;
+      text-align: center;
+    }
+  }
+
+  &--mission
+  {
+    .about
+    {
+      &-title
+      {
+        @extend .Heading;
+        @extend .Heading--h2;
+      }
+    }
+  }
+}
