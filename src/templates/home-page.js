@@ -11,8 +11,6 @@ import '../styles/home/styles.scss';
 let baseClass = 'homePage';
 
 export const HomePageTemplate = ({
-  title,
-  subtitle,
   meta_title,
   meta_description,
   hero,
@@ -29,8 +27,8 @@ export const HomePageTemplate = ({
     <Hero
       baseClass={baseClass}
       isFullHeight
-      titleText={title}
-      subtitleText={subtitle}
+      titleText={hero.title}
+      subtitleText={hero.subtitle}
       buttons={hero.buttons}
     />
 
@@ -75,8 +73,6 @@ const HomePage = ({data}) => {
 
   return (
     <HomePageTemplate
-      title={frontmatter.title}
-      subtitle={frontmatter.subtitle}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
       hero={frontmatter.hero}
@@ -101,12 +97,12 @@ export const pageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        subtitle
         heading
         meta_title
         meta_description
         hero {
+          title
+          subtitle
           buttons {
             text
             linkUrl

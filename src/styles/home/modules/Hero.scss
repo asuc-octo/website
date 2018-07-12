@@ -65,9 +65,15 @@
 
       .navbar
       {
+        &-burger
+        {
+          color: white;
+        }
+
         &-item
         {
           color: white;
+          background-color: transparent;
         }
       }
     }

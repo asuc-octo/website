@@ -1,17 +1,17 @@
 ---
 templateKey: 'home-page'
-title: ASUC OCTO
-subtitle: We build accessible, free software for Berkeley students.
 heading: ASUC OCTO
 meta_title: ASUC OCTO
 meta_description: >-
   UC Berkeley ASUC Office of the CTO
 hero:
+  title: ASUC OCTO
+  subtitle: We build accessible, free software for Berkeley students.
   buttons:
-    - text: Learn more
-      linkUrl: /
-    - text: Recruitment
-      linkUrl: /
+  - text: Learn more
+    linkUrl: /
+  - text: Recruitment
+    linkUrl: /
 promo:
   title: What We Do
   description: >-
