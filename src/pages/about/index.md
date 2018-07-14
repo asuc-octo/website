@@ -93,4 +93,10 @@ team:
     - name: Revati K.
       position: Chief Technology Officer
       imgUrl: /img/user.png
+  companies:
+    title: Where We've Gone
+    brands:
+    - imgUrl: img/google.png
+    - imgUrl: img/airbnb.png
+    - imgUrl: img/apple.png
 ---

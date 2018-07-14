@@ -59,6 +59,14 @@ export const AboutPageTemplate = ({
       profileColSize='one-third'
     />
 
+    <Profiles
+      baseClass={baseClass}
+      classModifier='companies'
+      title={team.companies.title}
+      profiles={team.companies.brands}
+      profileColSize='one-third'
+    />
+
   </div>
 );
 
@@ -121,6 +129,12 @@ export const aboutPageQuery = graphql`
             members {
               name
               position
+              imgUrl
+            }
+          }
+          companies {
+            title
+            brands {
               imgUrl
             }
           }
