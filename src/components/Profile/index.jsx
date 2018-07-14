@@ -9,12 +9,11 @@ const Profile = ({
   columnSize,
 }) => {
   return (
-    <div className={'column is-' + columnSize}>
-      <div className='profile'>
-        <img className='profile-image' src={imgUrl} alt='team member image' />
-        <h3 className='profile-name'>{name}</h3>
-        <p className='profile-position'>{position}</p>
-      </div>
+    <div className={`profile column is-${columnSize} ` +
+      (baseClass && `profile-${baseClass} `)}>
+      <img className='profile-image' src={imgUrl} alt='team member image' />
+      <h3 className='profile-name'>{name}</h3>
+      <p className='profile-position'>{position}</p>
     </div>
   );
 };

@@ -4,28 +4,31 @@ import Profile from '../Profile';
 
 const Profiles = ({
   baseClass,
+  classModifier,
   title,
   description,
   profiles,
-  productColSize,
+  profileColSize,
 }) => {
   return (
     <section className={'profiles section ' +
-      (baseClass && ('profiles-' + baseClass))}>
+      (baseClass && `profiles-${baseClass} `) +
+      (classModifier ? (`profiles--${classModifier} `) : '')}>
       <div className='profiles-container container'>
         <div className='content is-medium'>
           <h2 className='profiles-title'>{title}</h2>
           {description &&
             <p className='profiles-description'>{description}</p>
           }
-          <div className='columns'>
+          <div className='columns is-multiline is-centered'>
             {profiles.map(({name, position, imgUrl}, idx) => (
               <Profile
                 key={idx}
-                title={title}
-                description={description}
+                baseClass={baseClass}
+                name={name}
+                position={position}
                 imgUrl={imgUrl}
-                columnSize={productColSize}
+                columnSize={profileColSize}
               />
             ))}
           </div>
@@ -40,7 +43,7 @@ Profiles.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   profiles: PropTypes.array.isRequired,
-  productColSize: PropTypes.oneOfType([
+  profileColSize: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]),

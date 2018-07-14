@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import About from '../components/About';
+import Profiles from '../components/Profiles';
 
 import '../styles/about/styles.scss';
 
 let baseClass = 'aboutPage';
+
+// Pull from markdown later
 
 export const AboutPageTemplate = ({
   title,
@@ -13,6 +16,7 @@ export const AboutPageTemplate = ({
   meta_title,
   meta_description,
   mission,
+  team,
 }) => (
   <div className={baseClass}>
     <Helmet>
@@ -33,6 +37,28 @@ export const AboutPageTemplate = ({
       description={mission.description}
     />
 
+    <Profiles
+      baseClass={baseClass}
+      classModifier='chief'
+      title={team.chief.title}
+      profiles={team.chief.members}
+      profileColSize='one-third'
+    />
+
+    <Profiles
+      baseClass={baseClass}
+      title={team.berkeleyTime.title}
+      profiles={team.berkeleyTime.members}
+      profileColSize='one-third'
+    />
+
+    <Profiles
+      baseClass={baseClass}
+      title={team.berkeleyMobile.title}
+      profiles={team.berkeleyMobile.members}
+      profileColSize='one-third'
+    />
+
   </div>
 );
 
@@ -50,6 +76,7 @@ const AboutPage = ({data}) => {
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
       mission={frontmatter.mission}
+      team={frontmatter.team}
     />
   );
 };
@@ -71,6 +98,32 @@ export const aboutPageQuery = graphql`
         mission {
           title
           description
+        }
+        team {
+          chief {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          berkeleyTime {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          berkeleyMobile {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
         }
       }
     }

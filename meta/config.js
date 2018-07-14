@@ -6,14 +6,14 @@ module.exports = {
   pathPrefix: '/',
   siteDescription: 'UC Berkeley ASUC Office of the CTO',
   siteRss: '/rss.xml',
-  siteFBAppID: '', // FB Application ID for using app insights
-  googleTagManagerID: '', // GTM tracking ID.
-  disqusShortname: 'gatsby-business-starter', // Disqus
+  siteFBAppID: '',
+  googleTagManagerID: '',
+  disqusShortname: '',
   userName: 'ASUC OCTO',
-  userTwitter: 'vaibhaved',
+  userTwitter: '',
   userLocation: 'Berkeley, California',
   userDescription: '',
-  copyright: 'Copyright © ASUC Office of the CTO 2018.',
+  copyright: 'Copyright © ASUC Office of the CTO 2018',
   themeColor: '#2e73f5',
   backgroundColor: '#ffffff',
 };

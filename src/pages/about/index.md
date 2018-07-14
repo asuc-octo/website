@@ -8,4 +8,89 @@ meta_description: >-
 mission:
   title: Our Mission
   description: The ASUC Office of the Chief Technology Officer was founded in the spring of 2014 to address the critical need for student voices in rapidly changing campus technology spaces through advocacy, awareness, and actual technology product development.
+team:
+  chief:
+    title: Our Team
+    members:
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/revati.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+  berkeleyTime:
+    title: BerkeleyTime
+    members:
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+  berkeleyMobile:
+    title: Berkeley Mobile
+    members:
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png  
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
+    - name: Revati K.
+      position: Chief Technology Officer
+      imgUrl: /img/user.png
 ---

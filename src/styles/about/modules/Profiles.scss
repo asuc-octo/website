@@ -1,0 +1,39 @@
+.profiles-aboutPage.profiles
+{
+  .profiles
+  {
+    &-container
+    {
+      max-width: 60rem;
+    }
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h2;
+
+      text-align: center;
+      margin-bottom: $spaced-margin * 2;
+    }
+
+    &-description
+    {
+      white-space: pre-line;
+      text-align: center;
+    }
+  }
+}
+
+.profiles-aboutPage.profiles.profiles--chief
+{
+  .profile:first-child
+  {
+    width: 100%;
+
+    &-image
+    {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
