@@ -19,7 +19,7 @@ const Products = ({
         <div className='content is-medium'>
           <h2 className='products-title'>{title}</h2>
           <p className='products-description'>{description}</p>
-          <div className='columns'>
+          <div className='columns is-multiline'>
             {products.map(({title, description, imgUrl, linkUrl}, idx) => (
               <Product
                 key={idx}
@@ -31,11 +31,13 @@ const Products = ({
               />
             ))}
           </div>
-          <div className='products-linkWrapper'>
-            <Link className='products-button button' to={linkUrl}>
-              {linkText}
-            </Link>
-          </div>
+          {linkUrl && linkText &&
+            <div className='products-linkWrapper'>
+              <Link className='products-button button' to={linkUrl}>
+                {linkText}
+              </Link>
+            </div>
+          }
         </div>
       </div>
     </section>

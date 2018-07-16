@@ -18,7 +18,7 @@ export const HomePageTemplate = ({
   products,
   about,
 }) => (
-  <div className={baseClass}>
+  <div className={`${baseClass} pageContainer`}>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />

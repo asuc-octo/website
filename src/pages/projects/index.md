@@ -1,13 +1,13 @@
 ---
-templateKey: pricing-page
-title: Pricing
-meta_title: Pricing | Gatsby Starter Business
+templateKey: projects-page
+title: Projects
+meta_title: Projects | Gatsby Starter Business
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
   consectetur purus sit amet fermentum.
-pricing:
+projects:
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta justo justo,
     non semper odio cursus in. Curabitur ligula tortor, tristique non odio nec, imperdiet
