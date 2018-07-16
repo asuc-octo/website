@@ -8,32 +8,28 @@ meta_description: >-
   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
   consectetur purus sit amet fermentum.
 projects:
+  title: Projects
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta justo justo,
-    non semper odio cursus in. Curabitur ligula tortor, tristique non odio nec, imperdiet
-    mattis leo. Vivamus aliquam rhoncus tortor vitae convallis. Aliquam non dui nibh. Nam
-    a velit at enim sagittis pellentesque.
-  heading: Monthly subscriptions
-  plans:
-    - description: Nulla faucibus, leo a condimentum aliquam, libero leo vehicula arcu
-      items:
-        - Lorem ipsum dolor sit amet
-        - consectetur adipiscing elit
-        - Nunc finibus sem a sem ultrices
-      plan: Pro
-      price: '50'
-    - description: Mauris vitae dolor eu mauris malesuada cursus.
-      items:
-        - eget sagittis magna tempor
-        - Quisque pulvinar lorem molestie
-        - Proin at sagittis ex
-      plan: Enterprise
-      price: '80'
-    - description: Praesent elit lectus, iaculis vel odio vitae, bibendum auctor lacus.
-      items:
-        - Pellentesque luctus neque id mauris accumsan
-        - nec imperdiet justo eleifend
-        - Sed eget ornare orci
-      plan: Custom
-      price: '??'
+    Learn more about what ASUC OCTO has been working on.
+  products:
+    - title: BerkeleyTime
+      description: >-
+        Berkeley’s most popular online course catalog web app.
+      imgUrl: /img/products-grid3.jpg
+      linkUrl: /
+    - title: Berkeley Mobile
+      description: >-
+        Berkeley’s most popular online course catalog web app.
+      imgUrl: /img/products-grid3.jpg
+      linkUrl: /
+    - title: BerkeleyTime
+      description: >-
+        Berkeley’s most popular online course catalog web app.
+      imgUrl: /img/products-grid3.jpg
+      linkUrl: /
+    - title: Berkeley Mobile
+      description: >-
+        Berkeley’s most popular online course catalog web app.
+      imgUrl: /img/products-grid3.jpg
+      linkUrl: /
 ---

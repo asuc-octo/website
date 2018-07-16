@@ -5,7 +5,8 @@
     padding: $padded-padding * 10 $padded-padding * 2;
     max-width: 700px;
     margin: auto;
-    background: linear-gradient(#2e73f5, #ffa7d3);
+    object-fit: cover;
+    background-position: center center;
 
     &-title
     {

@@ -32,17 +32,17 @@ products:
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/coffee-gear.png
+      imgUrl: /img/products-grid3.jpg
       linkUrl: /
     - title: Berkeley Mobile
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/coffee-gear.png
+      imgUrl: /img/products-grid3.jpg
       linkUrl: /
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/coffee-gear.png
+      imgUrl: /img/products-grid3.jpg
       linkUrl: /
 about:
   title: Join Us

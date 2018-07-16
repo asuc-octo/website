@@ -7,37 +7,6 @@ import '../styles/projects/styles.scss';
 
 let baseClass = 'projectsPage';
 
-let products = {
-  title: 'Projects',
-  description: 'Learn more about what ASUC OCTO has been working on.',
-  products: [
-    {
-      title: 'BerkeleyTime',
-      description: 'Berkeley’s most popular online course catalog web app.',
-      imgUrl: '/img/coffee-gear.png',
-      linkUrl: '/',
-    },
-    {
-      title: 'BerkeleyTime',
-      description: 'Berkeley’s most popular online course catalog web app.',
-      imgUrl: '/img/coffee-gear.png',
-      linkUrl: '/',
-    },
-    {
-      title: 'BerkeleyTime',
-      description: 'Berkeley’s most popular online course catalog web app.',
-      imgUrl: '/img/coffee-gear.png',
-      linkUrl: '/',
-    },
-    {
-      title: 'BerkeleyTime',
-      description: 'Berkeley’s most popular online course catalog web app.',
-      imgUrl: '/img/coffee-gear.png',
-      linkUrl: '/',
-    },
-  ],
-};
-
 export const ProjectsPageTemplate = ({
   title,
   meta_title,
@@ -52,9 +21,9 @@ export const ProjectsPageTemplate = ({
 
     <Products
       baseClass={baseClass}
-      title={products.title}
-      description={products.description}
-      products={products.products}
+      title={projects.title}
+      description={projects.description}
+      products={projects.products}
       productColSize='half'
     />
 
@@ -66,9 +35,9 @@ ProjectsPageTemplate.propTypes = {
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   projects: PropTypes.shape({
-    heading: PropTypes.string,
+    title: PropTypes.string,
     description: PropTypes.string,
-    plans: PropTypes.array,
+    products: PropTypes.array,
   }),
 };
 
@@ -103,13 +72,13 @@ export const projectsPageQuery = graphql`
         meta_title
         meta_description
         projects {
-          heading
+          title
           description
-          plans {
+          products {
+            title
             description
-            items
-            plan
-            price
+            imgUrl
+            linkUrl
           }
         }
       }
