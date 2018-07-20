@@ -1,10 +1,7 @@
-/**
- * Created by vaibhav on 2/4/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Contact from '../components/Contact'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Contact from '../components/Contact';
 
 export const ContactPageTemplate = ({
   title,
@@ -45,8 +42,8 @@ export const ContactPageTemplate = ({
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 ContactPageTemplate.propTypes = {
   title: PropTypes.string,
@@ -55,10 +52,10 @@ ContactPageTemplate.propTypes = {
   meta_description: PropTypes.string,
   contacts: PropTypes.array,
 
-}
+};
 
 const ContactPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+  const {frontmatter} = data.markdownRemark;
   return (
     <ContactPageTemplate
       title={frontmatter.title}
@@ -67,8 +64,8 @@ const ContactPage = ({data}) => {
       meta_description={frontmatter.meta_description}
       contacts={frontmatter.contacts}
     />
-  )
-}
+  );
+};
 
 ContactPage.propTypes = {
   data: PropTypes.shape({
@@ -76,9 +73,9 @@ ContactPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default ContactPage
+export default ContactPage;
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
@@ -96,4 +93,4 @@ export const contactPageQuery = graphql`
       }
     }
   }
-`
+`;

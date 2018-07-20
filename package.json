@@ -2,7 +2,7 @@
   "name": "gatsby-starter-business",
   "description": "Gatsby Business Website Starter",
   "version": "1.0.0",
-  "author": "Vaibhav Sharma",
+  "author": "ASUC OCTO",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "bulma": "^0.6.2",
@@ -38,7 +38,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "lint": "eslint --ext js,jsx --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext js,jsx --ignore-path .gitignore .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

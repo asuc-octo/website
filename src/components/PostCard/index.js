@@ -1,8 +1,5 @@
-/**
- * Created by vaibhav on 2/4/18
- */
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 const PostCard = ({posts}) => {
   return (
@@ -33,7 +30,7 @@ const PostCard = ({posts}) => {
           </div>
         ))}
     </div>
-  )
-}
+  );
+};
 
-export default PostCard
+export default PostCard;

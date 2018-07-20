@@ -1,26 +1,23 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React, {Component} from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React, {Component} from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 class TagRoute extends Component {
   render () {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMarkdownRemark.edges;
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
           <h2 className='is-size-2'>{post.node.frontmatter.title}</h2>
         </Link>
       </li>
-    ))
-    const tag = this.props.pathContext.tag
-    const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
+    ));
+    const tag = this.props.pathContext.tag;
+    const title = this.props.data.site.siteMetadata.title;
+    const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`
+    } tagged with “${tag}”`;
 
     return (
       <section className='section'>
@@ -40,11 +37,11 @@ class TagRoute extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default TagRoute
+export default TagRoute;
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -71,4 +68,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;

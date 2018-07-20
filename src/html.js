@@ -1,30 +1,27 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React, {Component} from 'react'
-import favicon from './img/favicon.ico'
+import React, {Component} from 'react';
+import favicon from './img/favicon.ico';
 
-let inlinedStyles = ''
+let inlinedStyles = '';
 if (process.env.NODE_ENV === 'production') {
   try {
     /* eslint import/no-webpack-loader-syntax: off */
-    inlinedStyles = require('!raw-loader!../public/styles.css')
+    inlinedStyles = require('!raw-loader!../public/styles.css');
   } catch (e) {
     /* eslint no-console: "off" */
-    console.log(e)
+    console.log(e);
   }
 }
 
 export default class HTML extends Component {
   render () {
-    let css
+    let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id='gatsby-inlined-css'
           dangerouslySetInnerHTML={{__html: inlinedStyles}}
         />
-      )
+      );
     }
     return (
       <html lang='en'>
@@ -44,6 +41,6 @@ export default class HTML extends Component {
           <script src={__PATH_PREFIX__ + '/js/toggle.js'} />
         </body>
       </html>
-    )
+    );
   }
 }

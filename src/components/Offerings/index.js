@@ -1,8 +1,5 @@
-/**
- * Created by vaibhav on 1/4/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Offerings = ({ gridItems }) => (
   <div className='columns is-multiline'>
@@ -17,7 +14,7 @@ const Offerings = ({ gridItems }) => (
       </div>
     ))}
   </div>
-)
+);
 
 Offerings.propTypes = {
   gridItems: PropTypes.arrayOf(
@@ -26,6 +23,6 @@ Offerings.propTypes = {
       text: PropTypes.string,
     })
   ),
-}
+};
 
-export default Offerings
+export default Offerings;

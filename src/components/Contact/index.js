@@ -1,8 +1,5 @@
-/**
- * Created by vaibhav on 2/4/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Contact = ({email, description}) => {
   return (
@@ -12,12 +9,12 @@ const Contact = ({email, description}) => {
       <p><a href={`mailto:${email}`}>{email}</a></p>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
 Contact.propTypes = {
   email: PropTypes.string.isRequired,
   description: PropTypes.string,
-}
+};
 
-export default Contact
+export default Contact;

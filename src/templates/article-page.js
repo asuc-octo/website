@@ -1,14 +1,11 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import {kebabCase} from 'lodash'
-import Link from 'gatsby-link'
-import Content, {HTMLContent} from '../components/Content'
-import SE0 from '../components/SEO'
-import Disqus from '../components/Disqus'
-import Share from '../components/Share'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {kebabCase} from 'lodash';
+import Link from 'gatsby-link';
+import Content, {HTMLContent} from '../components/Content';
+import SE0 from '../components/SEO';
+import Disqus from '../components/Disqus';
+import Share from '../components/Share';
 
 export const ArticleTemplate = ({
   content,
@@ -20,7 +17,7 @@ export const ArticleTemplate = ({
   title,
   slug,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className='section'>
@@ -66,8 +63,8 @@ export const ArticleTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 ArticleTemplate.propTypes = {
   content: PropTypes.string.isRequired,
@@ -77,10 +74,10 @@ ArticleTemplate.propTypes = {
   meta_desc: PropTypes.string,
   title: PropTypes.string,
   slug: PropTypes.string,
-}
+};
 
 const ArticlePage = ({data}) => {
-  const {markdownRemark: post} = data
+  const {markdownRemark: post} = data;
   return (
     <ArticleTemplate
       content={post.html}
@@ -92,16 +89,16 @@ const ArticlePage = ({data}) => {
       title={post.frontmatter.title}
       slug={post.fields.slug}
     />
-  )
-}
+  );
+};
 
 ArticlePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default ArticlePage
+export default ArticlePage;
 
 export const pageQuery = graphql`
   query ArticleByID($id: String!) {
@@ -121,4 +118,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
