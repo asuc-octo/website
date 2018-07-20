@@ -96,7 +96,7 @@ team:
   companies:
     title: Where We've Gone
     brands:
-    - imgUrl: img/google.png
-    - imgUrl: img/airbnb.png
-    - imgUrl: img/apple.png
+    - imgUrl: /img/google.png
+    - imgUrl: /img/airbnb.png
+    - imgUrl: /img/apple.png
 ---

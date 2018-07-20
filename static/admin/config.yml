@@ -51,9 +51,45 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Meta Title", name: "meta_title", widget: "string"}
           - {label: "Meta Description", name: "meta_description", widget: "text"}
+          - {label: "Mission", name: "mission", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+            ]}
+          - {label: "Team", name: "team", widget: "object", fields: [
+              {label: "Executive", name: "chief", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Members", name: "members", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Position", name: "position", widget: "String"},
+                  {label: "Image", name: "imgUrl", widget: image"},
+                ]},
+              ]},
+              {label: "BerkeleyTime", name: "berkeleyTime", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Members", name: "members", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Position", name: "position", widget: "String"},
+                  {label: "Image", name: "imgUrl", widget: image"},
+                ]},
+              ]},
+              {label: "BerkeleyMobile", name: "berkeleyMobile", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Members", name: "members", widget: "list", fields: [
+                  {label: "Name", name: "name", widget: "string"},
+                  {label: "Position", name: "position", widget: "String"},
+                  {label: "Image", name: "imgUrl", widget: image"},
+                ]},
+              ]},
+              {label: "Companies", name: "companies", widget: "object", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Brands", name: "brands", widget: "list", fields: [
+                  {label: "Image", name: "imgUrl", widget: image"},
+                ]},
+              ]}
+            ]}
       # - file: "src/pages/pricing/index.md"
       #   label: "Pricing Page"
       #   name: "pricing"
