@@ -2,11 +2,12 @@
 {
   .product
   {
-    padding: $padded-padding * 10 $padded-padding * 2;
-    max-width: 700px;
-    margin: auto;
-    object-fit: cover;
-    background-position: center center;
+    &-text
+    {
+      $opacity-value: 0.5;
+
+      background: linear-gradient(rgba(46, 115, 245, $opacity-value), rgba(255, 167, 211, $opacity-value));
+    }
 
     &-title
     {

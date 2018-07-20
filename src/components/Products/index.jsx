@@ -19,7 +19,7 @@ const Products = ({
         <div className='content is-medium'>
           <h2 className='products-title'>{title}</h2>
           <p className='products-description'>{description}</p>
-          <div className='columns is-multiline'>
+          <div className='products-items columns is-multiline'>
             {products.map(({title, description, imgUrl, linkUrl}, idx) => (
               <Product
                 key={idx}

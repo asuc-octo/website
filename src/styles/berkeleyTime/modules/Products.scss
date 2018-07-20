@@ -1,4 +1,4 @@
-.products-homePage.products
+.products-berkeleyTime.products
 {
   .products
   {
@@ -6,16 +6,13 @@
     {
       @extend .Heading;
       @extend .Heading--h1;
+
+      margin-bottom: $spaced-margin * 2;
     }
 
     &-description
     {
       white-space: pre-line;
-    }
-
-    &-items
-    {
-      margin-bottom: $spaced-margin * 2;
     }
 
     &-linkWrapper

@@ -1,6 +1,6 @@
-.products-homePage.products
+.about-berkeleyTime.about
 {
-  .products
+  .about
   {
     &-title
     {
@@ -11,10 +11,7 @@
     &-description
     {
       white-space: pre-line;
-    }
 
-    &-items
-    {
       margin-bottom: $spaced-margin * 2;
     }
 

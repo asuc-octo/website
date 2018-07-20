@@ -1,0 +1,30 @@
+.hero-berkeleyTime.hero
+{
+  &-backgroundImage
+  {
+    background: -webkit-linear-gradient(left, #546bdb, #45b23f);
+    background: -o-linear-gradient(left, #546bdb, #45b23f);
+    background: linear-gradient(to right, #546bdb, #45b23f);
+  }
+
+  .hero
+  {
+    color: white;
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+
+      color: white;
+    }
+
+    &-subtitle
+    {
+      color: white;
+      margin: 1rem 0;
+      max-width: 400px;
+    }
+  }
+
+}

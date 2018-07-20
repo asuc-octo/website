@@ -1,0 +1,10 @@
+//Common styles
+@import "../common/styles.scss";
+
+//Local Styles
+.berkeleyTime
+{
+  @import "./mixins";
+  @import "./module";
+  @import "./theme";
+}

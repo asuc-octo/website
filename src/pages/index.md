@@ -9,7 +9,7 @@ hero:
   subtitle: We build accessible, free software for Berkeley students.
   buttons:
   - text: Learn more
-    linkUrl: /
+    linkUrl: /about
   - text: Recruitment
     linkUrl: /
 promo:
@@ -21,7 +21,7 @@ promo:
     As a full-fledged division of the ASUC with over 30 talented members, we work to improve the campus experience for everybody. Our team works on everything from Android, iOS, and back-end development to marketing and product management.
   image: /img/what-we-do.png
   linkText: Meet Our Team
-  linkTo: /
+  linkTo: /about
 products:
   title: Projects
   description: >-
@@ -33,12 +33,12 @@ products:
       description: >-
         Berkeley's most popular course catalog
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
+      linkUrl: /berkeleyTime
     - title: Berkeley Mobile
       description: >-
         Berkeley's most popular course catalog
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
+      linkUrl: /berkeleyMobile
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
