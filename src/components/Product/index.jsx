@@ -11,9 +11,12 @@ const Product = ({
 }) => {
   return (
     <div className={'column is-' + columnSize}>
-      <div className='product product-image' style={imgUrl && {backgroundImage: `url(${imgUrl})`}}>
-        <h3 className='product-title'>{title}</h3>
-        <p className='product-description'>{description}</p>
+      <div className='product'>
+        <img className='product-image' src={imgUrl} />
+        <div className='product-text'>
+          <h3 className='product-title'>{title}</h3>
+          <p className='product-description'>{description}</p>
+        </div>
       </div>
     </div>
   );

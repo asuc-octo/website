@@ -1,35 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
-const About = ({
-  baseClass,
-  classModifier,
-  title,
-  description,
-  linkUrl,
-  linkText,
-}) => {
-  return (
-    <section className={'about section ' +
-      (baseClass && (`about-${baseClass} `)) +
-      (classModifier ? (`about--${classModifier} `) : '')
-    }>
-      <div className='about-container container'>
-        <div className='content is-medium'>
-          <h2 className='about-title'>{title}</h2>
-          <p className='about-description'>{description}</p>
-          {linkText && linkUrl &&
-            <div className='about-linkWrapper'>
-              <Link className='about-button button' to={linkUrl}>
-                {linkText}
-              </Link>
+// baseClass
+// classModifier
+// title
+// description
+// linkText
+// linkUrl
+
+class About extends Component {
+  render () {
+    return (
+      <section className={'about section ' +
+        (this.props.baseClass && (`about-${this.props.baseClass} `)) +
+        (this.props.classModifier ? (`about--${this.props.classModifier} `) : '')
+      }>
+        <div className='about-container container'>
+          <div className='content is-medium'>
+            <h2 className='about-title'>{this.props.title}</h2>
+            <p className='about-description'>{this.props.description}</p>
+            <div className='about-extra'>
+              {this.props.children}
             </div>
-          }
+            {this.props.linkText && this.props.linkUrl &&
+              <div className='about-linkWrapper'>
+                <Link className='about-button button' to={this.props.linkUrl}>
+                  {this.props.linkText}
+                </Link>
+              </div>
+            }
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
 };
 
 About.propTypes = {

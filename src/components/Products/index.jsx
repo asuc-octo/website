@@ -23,10 +23,10 @@ const Products = ({
             {products.map(({title, description, imgUrl, linkUrl}, idx) => (
               <Product
                 key={idx}
-                title={title}
-                description={description}
+                title={title || ''}
+                description={description || ''}
                 imgUrl={imgUrl}
-                linkUrl={linkUrl}
+                linkUrl={linkUrl || ''}
                 columnSize={productColSize}
               />
             ))}

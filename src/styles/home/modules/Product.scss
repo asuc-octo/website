@@ -2,10 +2,33 @@
 {
   .product
   {
-    padding: $padded-padding * 8 $padded-padding * 2;
-    margin: $spaced-margin * 3  0;
-    background-position: center center;
-    // background: linear-gradient(#2e73f5, #ffa7d3);
+    position: relative;
+    width: 100%;
+
+    &-image
+    {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    &-text
+    {
+      position: absolute;
+      width: 100%;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      $opacity-value: 0.5;
+
+      background: linear-gradient(rgba(46, 115, 245, $opacity-value), rgba(255, 167, 211, $opacity-value));
+    }
 
     &-title
     {

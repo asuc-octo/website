@@ -1,42 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
-const Promo = ({
-  baseClass,
-  promoImageURL,
-  title,
-  description,
-  linkText,
-  linkUrl,
-  imageColumns,
-}) => {
-  return (
-    <section className={'promo section ' +
-      (baseClass && ('promo-' + baseClass))}>
-      <div className='promo-container container'>
-        <div className='columns'>
-          <div className={'column is-' + imageColumns}>
-            <div className='promo-imageWrapper'>
-              <img alt='' src={promoImageURL} />
+// const Promo = ({
+//   baseClass,
+//   promoImageURL,
+//   title,
+//   description,
+//   linkText,
+//   linkUrl,
+//   imageColumns,
+// }) => {
+class Promo extends Component {
+  render () {
+    return (
+      <section className={'promo section ' +
+        (this.props.baseClass && ('promo-' + this.props.baseClass))}>
+        <div className='promo-container container'>
+          <div className='columns'>
+            <div className={'column is-' + this.props.imageColumns}>
+              <div className='promo-imageWrapper'>
+                <img alt='' src={this.props.promoImageURL} />
+              </div>
             </div>
-          </div>
-          <div className='column'>
-            <div className='promo-content content is-medium'>
-              <h2 className='promo-title'>{title}</h2>
-              <p className='promo-description'>{description}</p>
-              <div className='promo-linkWrapper'>
-                <Link className='promo-button button' to={linkUrl}>
-                  {linkText}
-                </Link>
+            <div className='column'>
+              <div className='promo-content content is-medium'>
+                <h2 className='promo-title'>{this.props.title}</h2>
+                <p className='promo-description'>{this.props.description}</p>
+                {this.props.children}
+                {this.props.linkText && this.props.linkUrl &&
+                  <div className='promo-linkWrapper'>
+                    <Link className='promo-button button' to={this.props.linkUrl}>
+                      {this.props.linkText}
+                    </Link>
+                  </div>
+                }
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    );
+  }
+}
 
 Promo.propTypes = {
   baseClass: PropTypes.string,

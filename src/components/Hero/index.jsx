@@ -9,12 +9,15 @@ const Hero = ({
   titleText,
   subtitleText,
   buttons,
+  navBar,
 }) => {
   return (
     <section className={'hero hero-backgroundImage ' +
       (baseClass && `hero-${baseClass} `) +
-      (isFullHeight && 'is-fullheight ')}>
-      <NavBar className='hero-navbar' />
+      (isFullHeight ? 'is-fullheight ' : '')}>
+      {navBar &&
+        <NavBar className='hero-navbar' />
+      }
       <div className='hero-body'>
         <div className='hero-container container'>
           <div className='columns'>
@@ -27,13 +30,15 @@ const Hero = ({
               {subtitleText}
             </h2>
           </div>
-          <div className='columns column'>
-            {buttons.map(({text, linkUrl}, idx) => (
-              <Link to={linkUrl} className='hero-button button' key={idx}>
-                {text}
-              </Link>
-            ))}
-          </div>
+          {buttons &&
+            <div className='columns column'>
+              {buttons.map(({text, linkUrl}, idx) => (
+                <Link to={linkUrl} className='hero-button button' key={idx}>
+                  {text}
+                </Link>
+              ))}
+            </div>
+          }
         </div>
       </div>
     </section>

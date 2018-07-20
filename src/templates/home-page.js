@@ -27,6 +27,7 @@ export const HomePageTemplate = ({
     <Hero
       baseClass={baseClass}
       isFullHeight
+      navBar
       titleText={hero.title}
       subtitleText={hero.subtitle}
       buttons={hero.buttons}
