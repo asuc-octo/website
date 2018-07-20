@@ -1,33 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HomePageTemplate } from '../../templates/home-page';
+import { BerkeleyMobileTemplate } from '../../templates/berkeleyMobile-page';
 
-const HomePagePreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'offerings', 'blurbs']);
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
-
-  const entryTestimonials = entry.getIn(['data', 'testimonials']);
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
+const BerkeleyMobilePreview = ({ entry, getAsset }) => {
+  const data = entry.get('data').toJS();
 
   return (
-    <HomePageTemplate
-      title={entry.getIn(['data', 'title'])}
-      subtitle={entry.getIn(['data', 'subtitle'])}
-      meta_title={entry.getIn(['data', 'meta_title'])}
-      meta_description={entry.getIn(['data', 'meta_description'])}
-      heading={entry.getIn(['data', 'heading'])}
-      description={entry.getIn(['data', 'description'])}
-      offerings={{ blurbs }}
-      testimonials={testimonials}
+    <BerkeleyMobileTemplate
+      {...data}
     />
   );
 };
 
-HomePagePreview.propTypes = {
+BerkeleyMobilePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
 };
 
-export default HomePagePreview;
+export default BerkeleyMobilePreview;

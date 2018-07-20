@@ -90,6 +90,94 @@ collections:
                 ]},
               ]}
             ]}
+      - file: "src/pages/berkeleyMobile/index.md"
+        label: "Berkley Mobile"
+        name: "berkeleyMobile"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "berkeleyMobile-page"}
+          - {label: "Meta Title", name: "meta_title", widget: "string"}
+          - {label: "Meta Description", name: "meta_description", widget: "text"}
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Subtitle", name: "subtitle", widget: "string"},
+            ]}
+          - {label: "About", name: "about", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Apple Store", name: "appleStore", widget: "image"},
+              {label: "Google Play", name: "googlePlay", widget: "image"},
+            ]}
+          - {label: "Features", name: "features", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Images", name: "images", widget: "list", fields: [
+               {label: "Image URL", name: "imgUrl", widget: "string"},
+              ]},
+            ]}
+          - {label: "Team", name: "team", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Roles", name: "roles", widget: "list", fields: [
+                {label: "Role Title", name: "heading", widget: "string"},
+                {label: "Role Description", name: "description", widget: "text"},
+              ]},
+            ]}
+          - {label: "Recruitment", name: "recruitment", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Roles", name: "roles", widget: "list", fields: [
+                {label: "Role Title", name: "heading", widget: "string"},
+                {label: "Role Description", name: "description", widget: "text"},
+                {label: "Link Text", name: "linkText", widget: "string"},
+                {label: "Link Url", name: "linkTo", widget: "string"},
+              ]},
+            ]}
+      - file: "src/pages/berkeleyTime/index.md"
+        label: "BerkleyTime"
+        name: "berkeleyTime"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "berkeleyTime-page"}
+          - {label: "Meta Title", name: "meta_title", widget: "string"}
+          - {label: "Meta Description", name: "meta_description", widget: "text"}
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Subtitle", name: "subtitle", widget: "string"},
+            ]}
+          - {label: "About", name: "about", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Apple Store", name: "appleStore", widget: "image"},
+              {label: "Google Play", name: "googlePlay", widget: "image"},
+            ]}
+          - {label: "Features", name: "features", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Images", name: "images", widget: "list", fields: [
+               {label: "Image URL", name: "imgUrl", widget: "string"},
+              ]},
+            ]}
+          - {label: "Team", name: "team", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Roles", name: "roles", widget: "list", fields: [
+                {label: "Role Title", name: "heading", widget: "string"},
+                {label: "Role Description", name: "description", widget: "text"},
+              ]},
+            ]}
+          - {label: "Recruitment", name: "recruitment", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "imgUrl", widget: "image"},
+              {label: "Roles", name: "roles", widget: "list", fields: [
+                {label: "Role Title", name: "heading", widget: "string"},
+                {label: "Role Description", name: "description", widget: "text"},
+                {label: "Link Text", name: "linkText", widget: "string"},
+                {label: "Link Url", name: "linkTo", widget: "string"},
+              ]},
+            ]}
       # - file: "src/pages/pricing/index.md"
       #   label: "Pricing Page"
       #   name: "pricing"
@@ -100,16 +188,16 @@ collections:
       #     - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       #     - {label: "Meta Title", name: "meta_title", widget: "string"}
       #     - {label: "Meta Description", name: "meta_description", widget: "text"}
-      - file: "src/pages/contact/index.md"
-        label: "Contact Page"
-        name: "contact"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Contacts, name: contacts, widget: list, fields: [{label: Email, name: email, widget: string}, {label: Description, name: description, widget: string}]}
-          - {label: "Meta Title", name: "meta_title", widget: "string"}
-          - {label: "Meta Description", name: "meta_description", widget: "text"}
+      # - file: "src/pages/contact/index.md"
+      #   label: "Contact Page"
+      #   name: "contact"
+      #   fields:
+      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Subtitle, name: subtitle, widget: string}
+      #     - {label: Contacts, name: contacts, widget: list, fields: [{label: Email, name: email, widget: string}, {label: Description, name: description, widget: string}]}
+      #     - {label: "Meta Title", name: "meta_title", widget: "string"}
+      #     - {label: "Meta Description", name: "meta_description", widget: "text"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
