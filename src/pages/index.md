@@ -27,7 +27,7 @@ products:
   description: >-
     Right now, we’re working on four exciting projects: Berkeley Mobile, Berkeley Time, Hermione, and Digital Service.
   linkText: View our Projects
-  linkTo: /
+  linkTo: /projects
   products:
     - title: BerkeleyTime
       description: >-
