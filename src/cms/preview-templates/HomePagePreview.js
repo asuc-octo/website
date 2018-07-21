@@ -7,12 +7,7 @@ const HomePagePreview = ({ entry, getAsset }) => {
 
   return (
     <HomePageTemplate
-      meta_title={data.meta_title}
-      meta_description={data.meta_description}
-      hero={data.hero}
-      promo={data.promo}
-      products={data.products}
-      about={data.about}
+      {...data}
     />
   );
 };

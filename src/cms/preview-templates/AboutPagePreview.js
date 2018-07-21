@@ -7,12 +7,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
 
   return (
     <AboutPageTemplate
-      title={data.title}
-      subtitle={data.subtitle}
-      meta_title={data.meta_title}
-      meta_description={data.meta_description}
-      mission={data.mission}
-      team={data.team}
+      {...data}
     />
   );
 };

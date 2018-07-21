@@ -44,7 +44,12 @@ collections:
                 {label: "Link URL", name: "linkUrl", widget: "string"}
               ]}
             ]}
-          - {label: "About", name: "about", widget: "object", fields: [ {label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "text"}, {label: "Link Text", name: "linkText", widget: "string"}, {label: "Link URL", name: "linkTo", widget: "string"} ]}
+          - {label: "About", name: "about", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Link Text", name: "linkText", widget: "string"},
+              {label: "Link URL", name: "linkTo", widget: "string"}
+            ]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
@@ -63,24 +68,24 @@ collections:
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Members", name: "members", widget: "list", fields: [
                   {label: "Name", name: "name", widget: "string"},
-                  {label: "Position", name: "position", widget: "String"},
-                  {label: "Image", name: "imgUrl", widget: image"},
+                  {label: "Position", name: "position", widget: "string"},
+                  {label: "Image", name: "imgUrl", widget: "image"},
                 ]},
               ]},
               {label: "BerkeleyTime", name: "berkeleyTime", widget: "object", fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Members", name: "members", widget: "list", fields: [
                   {label: "Name", name: "name", widget: "string"},
-                  {label: "Position", name: "position", widget: "String"},
-                  {label: "Image", name: "imgUrl", widget: image"},
+                  {label: "Position", name: "position", widget: "string"},
+                  {label: "Image", name: "imgUrl", widget: "image"},
                 ]},
               ]},
               {label: "BerkeleyMobile", name: "berkeleyMobile", widget: "object", fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Members", name: "members", widget: "list", fields: [
                   {label: "Name", name: "name", widget: "string"},
-                  {label: "Position", name: "position", widget: "String"},
-                  {label: "Image", name: "imgUrl", widget: image"},
+                  {label: "Position", name: "position", widget: "string"},
+                  {label: "Image", name: "imgUrl", widget: "image"},
                 ]},
               ]},
               {label: "Companies", name: "companies", widget: "object", fields: [
@@ -111,7 +116,7 @@ collections:
           - {label: "Features", name: "features", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Images", name: "images", widget: "list", fields: [
-               {label: "Image URL", name: "imgUrl", widget: "string"},
+               {label: "Image", name: "imgUrl", widget: "image"},
               ]},
             ]}
           - {label: "Team", name: "team", widget: "object", fields: [
@@ -155,7 +160,7 @@ collections:
           - {label: "Features", name: "features", widget: "object", fields: [
               {label: "Title", name: "title", widget: "string"},
               {label: "Images", name: "images", widget: "list", fields: [
-               {label: "Image URL", name: "imgUrl", widget: "string"},
+               {label: "Image", name: "imgUrl", widget: "image"},
               ]},
             ]}
           - {label: "Team", name: "team", widget: "object", fields: [
