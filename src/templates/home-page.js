@@ -28,37 +28,24 @@ export const HomePageTemplate = ({
       baseClass={baseClass}
       isFullHeight
       navBar
-      titleText={hero.title}
-      subtitleText={hero.subtitle}
-      buttons={hero.buttons}
+      {...hero}
     />
 
     <Promo
       baseClass={baseClass}
-      promoImageURL={promo.image}
-      title={promo.title}
-      description={promo.description}
-      linkText={promo.linkText}
-      linkUrl={promo.linkTo}
+      {...promo}
       imageColumns={5}
     />
 
     <Products
       baseClass={baseClass}
-      title={products.title}
-      description={products.description}
-      linkText={products.linkText}
-      linkUrl={products.linkTo}
-      products={products.products}
+      {...products}
       productColSize='one-third'
     />
 
     <About
       baseClass={baseClass}
-      title={about.title}
-      description={about.description}
-      linkText={about.linkText}
-      linkUrl={about.linkTo}
+      {...about}
     />
   </div>
 );
@@ -66,7 +53,10 @@ export const HomePageTemplate = ({
 HomePageTemplate.propTypes = {
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
+  hero: PropTypes.object,
   promo: PropTypes.object,
+  products: PropTypes.object,
+  about: PropTypes.object,
 };
 
 const HomePage = ({data}) => {
@@ -74,12 +64,7 @@ const HomePage = ({data}) => {
 
   return (
     <HomePageTemplate
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      hero={frontmatter.hero}
-      promo={frontmatter.promo}
-      products={frontmatter.products}
-      about={frontmatter.about}
+      {...frontmatter}
     />
   );
 };

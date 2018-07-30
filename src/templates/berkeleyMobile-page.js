@@ -27,16 +27,14 @@ export const BerkeleyMobileTemplate = ({
 
     <Hero
       baseClass={baseClass}
-      titleText={hero.title}
-      subtitleText={hero.subtitle}
+      {...hero}
     />
 
     <Promo
       baseClass={baseClass}
-      title={about.title}
-      description={about.description}
-      promoImageURL={about.imgUrl}
       imageColumns={5}
+      {...about}
+      image={about.imgUrl}
     >
       <div className='promo-appStoreBadges'>
         <img className='promo-appStoreBadge' src={about.appleStore} />
@@ -53,10 +51,9 @@ export const BerkeleyMobileTemplate = ({
 
     <Promo
       baseClass={baseClass}
-      title={team.title}
-      description={team.description}
-      promoImageURL={team.imgUrl}
       imageColumns={6}
+      {...team}
+      image={team.imgUrl}
     >
       <div className='promo-roles'>
         {team.roles.map(({heading, description}, idx) => (
@@ -70,10 +67,7 @@ export const BerkeleyMobileTemplate = ({
 
     <About
       baseClass={baseClass}
-      title={recruitment.title}
-      description={recruitment.description}
-      linkText={recruitment.linkText}
-      linkUrl={recruitment.linkTo}
+      {...recruitment}
     />
 
   </div>
@@ -82,6 +76,11 @@ export const BerkeleyMobileTemplate = ({
 BerkeleyMobileTemplate.propTypes = {
   meta_title: PropTypes.string.isRequired,
   meta_description: PropTypes.string.isRequired,
+  hero: PropTypes.object,
+  about: PropTypes.object,
+  features: PropTypes.object,
+  team: PropTypes.object,
+  recruitment: PropTypes.object,
 };
 
 const BerkeleyMobile = ({data}) => {
@@ -89,13 +88,7 @@ const BerkeleyMobile = ({data}) => {
 
   return (
     <BerkeleyMobileTemplate
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      hero={frontmatter.hero}
-      about={frontmatter.about}
-      features={frontmatter.features}
-      team={frontmatter.team}
-      recruitment={frontmatter.recruitment}
+      {...frontmatter}
     />
   );
 };

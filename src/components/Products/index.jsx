@@ -8,7 +8,7 @@ const Products = ({
   title,
   description,
   linkText,
-  linkUrl,
+  linkTo,
   products,
   productColSize,
 }) => {
@@ -20,20 +20,17 @@ const Products = ({
           <h2 className='products-title'>{title}</h2>
           <p className='products-description'>{description}</p>
           <div className='products-items columns is-multiline'>
-            {products.map(({title, description, imgUrl, linkUrl}, idx) => (
+            {products.map((product, idx) => (
               <Product
                 key={idx}
-                title={title || ''}
-                description={description || ''}
-                imgUrl={imgUrl}
-                linkUrl={linkUrl || ''}
                 columnSize={productColSize}
+                {...product}
               />
             ))}
           </div>
-          {linkUrl && linkText &&
+          {linkTo && linkText &&
             <div className='products-linkWrapper'>
-              <Link className='products-button button' to={linkUrl}>
+              <Link className='products-button button' to={linkTo}>
                 {linkText}
               </Link>
             </div>
@@ -49,7 +46,7 @@ Products.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   linkText: PropTypes.string,
-  linkUrl: PropTypes.string,
+  linkTo: PropTypes.string,
   products: PropTypes.array,
   productColSize: PropTypes.oneOfType([
     PropTypes.string,

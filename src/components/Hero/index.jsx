@@ -6,8 +6,8 @@ import NavBar from '../NavBar';
 const Hero = ({
   baseClass,
   isFullHeight,
-  titleText,
-  subtitleText,
+  title,
+  subtitle,
   buttons,
   navBar,
 }) => {
@@ -22,12 +22,12 @@ const Hero = ({
         <div className='hero-container container'>
           <div className='columns'>
             <h1 className='hero-title title is-spaced has-text-weight-bold column is-12'>
-              {titleText}
+              {title}
             </h1>
           </div>
           <div className='columns'>
             <h2 className='hero-subtitle subtitle column is-one-third'>
-              {subtitleText}
+              {subtitle}
             </h2>
           </div>
           {buttons &&
@@ -48,8 +48,8 @@ const Hero = ({
 Hero.propTypes = {
   baseClass: PropTypes.string,
   isFullHeight: PropTypes.bool,
-  titleText: PropTypes.string,
-  subtitleText: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
   buttons: PropTypes.array,
 };
 

@@ -7,7 +7,7 @@ import Link from 'gatsby-link';
 // title
 // description
 // linkText
-// linkUrl
+// linkTo
 
 class About extends Component {
   render () {
@@ -23,9 +23,9 @@ class About extends Component {
             <div className='about-extra'>
               {this.props.children}
             </div>
-            {this.props.linkText && this.props.linkUrl &&
+            {this.props.linkText && this.props.linkTo &&
               <div className='about-linkWrapper'>
-                <Link className='about-button button' to={this.props.linkUrl}>
+                <Link className='about-button button' to={this.props.linkTo}>
                   {this.props.linkText}
                 </Link>
               </div>
@@ -43,7 +43,7 @@ About.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   linkText: PropTypes.string,
-  linkUrl: PropTypes.string,
+  linkTo: PropTypes.string,
 };
 
 export default About;

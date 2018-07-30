@@ -33,8 +33,7 @@ export const AboutPageTemplate = ({
     <About
       baseClass={baseClass}
       classModifier='mission'
-      title={mission.title}
-      description={mission.description}
+      {...mission}
     />
 
     <Profiles
@@ -71,7 +70,12 @@ export const AboutPageTemplate = ({
 );
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  meta_title: PropTypes.string,
+  meta_description: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  mission: PropTypes.object,
+  team: PropTypes.object,
 };
 
 const AboutPage = ({data}) => {
@@ -79,18 +83,17 @@ const AboutPage = ({data}) => {
 
   return (
     <AboutPageTemplate
-      title={frontmatter.title}
-      subtitle={frontmatter.subtitle}
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      mission={frontmatter.mission}
-      team={frontmatter.team}
+      {...frontmatter}
     />
   );
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default AboutPage;

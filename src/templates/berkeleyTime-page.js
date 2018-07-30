@@ -27,16 +27,14 @@ export const BerkeleyTimeTemplate = ({
 
     <Hero
       baseClass={baseClass}
-      titleText={hero.title}
-      subtitleText={hero.subtitle}
+      {...hero}
     />
 
     <Promo
       baseClass={baseClass}
-      title={about.title}
-      description={about.description}
-      promoImageURL={about.imgUrl}
       imageColumns={5}
+      {...about}
+      image={about.imgUrl}
     >
       <div className='promo-appStoreBadges'>
         <img className='promo-appStoreBadge' src={about.appleStore} />
@@ -53,10 +51,9 @@ export const BerkeleyTimeTemplate = ({
 
     <Promo
       baseClass={baseClass}
-      title={team.title}
-      description={team.description}
-      promoImageURL={team.imgUrl}
       imageColumns={6}
+      {...team}
+      image={team.imgUrl}
     >
       <div className='promo-roles'>
         {team.roles.map(({heading, description}, idx) => (
@@ -70,18 +67,20 @@ export const BerkeleyTimeTemplate = ({
 
     <About
       baseClass={baseClass}
-      title={recruitment.title}
-      description={recruitment.description}
-      linkText={recruitment.linkText}
-      linkUrl={recruitment.linkTo}
+      {...recruitment}
     />
 
   </div>
 );
 
 BerkeleyTimeTemplate.propTypes = {
-  meta_title: PropTypes.string.isRequired,
-  meta_description: PropTypes.string.isRequired,
+  meta_title: PropTypes.string,
+  meta_description: PropTypes.string,
+  hero: PropTypes.object,
+  about: PropTypes.object,
+  features: PropTypes.object,
+  team: PropTypes.object,
+  recruitment: PropTypes.object,
 };
 
 const BerkeleyTime = ({data}) => {

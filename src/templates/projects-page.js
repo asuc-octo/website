@@ -21,9 +21,7 @@ export const ProjectsPageTemplate = ({
 
     <Products
       baseClass={baseClass}
-      title={projects.title}
-      description={projects.description}
-      products={projects.products}
+      {...projects}
       productColSize='half'
     />
 
@@ -46,10 +44,7 @@ const ProjectsPage = ({data}) => {
 
   return (
     <ProjectsPageTemplate
-      title={frontmatter.title}
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      projects={frontmatter.projects}
+      {...frontmatter}
     />
   );
 };
