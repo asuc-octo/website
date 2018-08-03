@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import About from '../components/About';
@@ -10,64 +11,74 @@ let baseClass = 'aboutPage';
 
 // Pull from markdown later
 
-export const AboutPageTemplate = ({
-  title,
-  subtitle,
-  meta_title,
-  meta_description,
-  mission,
-  team,
-}) => (
-  <div className={`${baseClass} pageContainer`}>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
+// title,
+// subtitle,
+// meta_title,
+// meta_description,
+// mission,
+// team,
 
-    <About
-      baseClass={baseClass}
-      title={title}
-      description={subtitle}
-    />
+class AboutPageTemplate extends Component {
+  componentDidMount () {
+    sr.reveal('.hero-body');
+    sr.reveal('.about-container');
+    sr.reveal('.profile', { duration: 1500 }, 75);
+  }
 
-    <About
-      baseClass={baseClass}
-      classModifier='mission'
-      {...mission}
-    />
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
 
-    <Profiles
-      baseClass={baseClass}
-      classModifier='chief'
-      title={team.chief.title}
-      profiles={team.chief.members}
-      profileColSize='one-third'
-    />
+        <About
+          baseClass={baseClass}
+          title={this.props.title}
+          description={this.props.subtitle}
+        />
 
-    <Profiles
-      baseClass={baseClass}
-      title={team.berkeleyTime.title}
-      profiles={team.berkeleyTime.members}
-      profileColSize='one-third'
-    />
+        <About
+          baseClass={baseClass}
+          classModifier='mission'
+          {...this.props.mission}
+        />
 
-    <Profiles
-      baseClass={baseClass}
-      title={team.berkeleyMobile.title}
-      profiles={team.berkeleyMobile.members}
-      profileColSize='one-third'
-    />
+        <Profiles
+          baseClass={baseClass}
+          classModifier='chief'
+          title={this.props.team.chief.title}
+          profiles={this.props.team.chief.members}
+          profileColSize='one-third'
+        />
 
-    <Profiles
-      baseClass={baseClass}
-      classModifier='companies'
-      title={team.companies.title}
-      profiles={team.companies.brands}
-      profileColSize='one-third'
-    />
+        <Profiles
+          baseClass={baseClass}
+          title={this.props.team.berkeleyTime.title}
+          profiles={this.props.team.berkeleyTime.members}
+          profileColSize='one-third'
+        />
 
-  </div>
-);
+        <Profiles
+          baseClass={baseClass}
+          title={this.props.team.berkeleyMobile.title}
+          profiles={this.props.team.berkeleyMobile.members}
+          profileColSize='one-third'
+        />
+
+        <Profiles
+          baseClass={baseClass}
+          classModifier='companies'
+          title={this.props.team.companies.title}
+          profiles={this.props.team.companies.brands}
+          profileColSize='one-third'
+        />
+
+      </div>
+    );
+  }
+}
 
 AboutPageTemplate.propTypes = {
   meta_title: PropTypes.string,

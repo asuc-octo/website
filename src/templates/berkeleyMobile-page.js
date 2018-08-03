@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
@@ -10,68 +11,80 @@ import '../styles/berkeleyMobile/styles.scss';
 
 let baseClass = 'berkeleyMobile';
 
-export const BerkeleyMobileTemplate = ({
-  meta_title,
-  meta_description,
-  hero,
-  about,
-  features,
-  team,
-  recruitment,
-}) => (
-  <div className={`${baseClass} pageContainer`}>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
+// meta_title,
+// hero,
+// about
+// features,
+// team,
+// recruitment,
 
-    <Hero
-      baseClass={baseClass}
-      {...hero}
-    />
+class BerkeleyMobileTemplate extends Component {
+  componentDidMount () {
+    sr.reveal('.hero-body');
+    sr.reveal('.promo-container');
+    sr.reveal('.products-container');
+    sr.reveal('.product', { duration: 1500 }, 100);
+    sr.reveal('.promo-container');
+    sr.reveal('.about-container');
+  }
 
-    <Promo
-      baseClass={baseClass}
-      imageColumns={5}
-      {...about}
-      image={about.imgUrl}
-    >
-      <div className='promo-appStoreBadges'>
-        <img className='promo-appStoreBadge' src={about.appleStore} />
-        <img className='promo-appStoreBadge' src={about.googlePlay} />
-      </div>
-    </Promo>
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
 
-    <Products
-      baseClass={baseClass}
-      title={features.title}
-      products={features.images}
-      productColSize={3}
-    />
+        <Hero
+          baseClass={baseClass}
+          {...this.props.hero}
+        />
 
-    <Promo
-      baseClass={baseClass}
-      imageColumns={6}
-      {...team}
-      image={team.imgUrl}
-    >
-      <div className='promo-roles'>
-        {team.roles.map(({heading, description}, idx) => (
-          <div className='promo-role' key={idx}>
-            <h3 className='promo-roleTitle'>{heading}</h3>
-            <p className='promo-roleDescription'>{description}</p>
+        <Promo
+          baseClass={baseClass}
+          imageColumns={5}
+          {...this.props.about}
+          image={this.props.about.imgUrl}
+        >
+          <div className='promo-appStoreBadges'>
+            <img className='promo-appStoreBadge' src={this.props.about.appleStore} />
+            <img className='promo-appStoreBadge' src={this.props.about.googlePlay} />
           </div>
-        ))}
+        </Promo>
+
+        <Products
+          baseClass={baseClass}
+          title={this.props.features.title}
+          products={this.props.features.images}
+          productColSize={3}
+        />
+
+        <Promo
+          baseClass={baseClass}
+          imageColumns={6}
+          {...this.props.team}
+          image={this.props.team.imgUrl}
+        >
+          <div className='promo-roles'>
+            {this.props.team.roles.map(({heading, description}, idx) => (
+              <div className='promo-role' key={idx}>
+                <h3 className='promo-roleTitle'>{heading}</h3>
+                <p className='promo-roleDescription'>{description}</p>
+              </div>
+            ))}
+          </div>
+        </Promo>
+
+        <About
+          baseClass={baseClass}
+          {...this.props.recruitment}
+        />
+
       </div>
-    </Promo>
-
-    <About
-      baseClass={baseClass}
-      {...recruitment}
-    />
-
-  </div>
-);
+    );
+  }
+}
 
 BerkeleyMobileTemplate.propTypes = {
   meta_title: PropTypes.string.isRequired,

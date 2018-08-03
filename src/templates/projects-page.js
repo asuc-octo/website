@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Products from '../components/Products';
@@ -7,26 +8,35 @@ import '../styles/projects/styles.scss';
 
 let baseClass = 'projectsPage';
 
-export const ProjectsPageTemplate = ({
-  title,
-  meta_title,
-  meta_description,
-  projects,
-}) => (
-  <div className={`${baseClass} pageContainer`}>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
+// title,
+// meta_title,
+// meta_description,
+// projects,
 
-    <Products
-      baseClass={baseClass}
-      {...projects}
-      productColSize='half'
-    />
+class ProjectsPageTemplate extends Component {
+  componentDidMount () {
+    sr.reveal('.products-container');
+    sr.reveal('.product', { duration: 2000 }, 100);
+  }
 
-  </div>
-);
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
+
+        <Products
+          baseClass={baseClass}
+          {...this.props.projects}
+          productColSize='half'
+        />
+
+      </div>
+    );
+  }
+}
 
 ProjectsPageTemplate.propTypes = {
   title: PropTypes.string,

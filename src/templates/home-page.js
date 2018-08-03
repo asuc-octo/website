@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
@@ -10,45 +11,56 @@ import '../styles/home/styles.scss';
 
 let baseClass = 'homePage';
 
-export const HomePageTemplate = ({
-  meta_title,
-  meta_description,
-  hero,
-  promo,
-  products,
-  about,
-}) => (
-  <div className={`${baseClass} pageContainer`}>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
+// meta_title,
+// meta_description,
+// hero,
+// promo,
+// products,
+// about,
 
-    <Hero
-      baseClass={baseClass}
-      isFullHeight
-      navBar
-      {...hero}
-    />
+export class HomePageTemplate extends Component {
+  componentDidMount () {
+    sr.reveal('.hero-body');
+    sr.reveal('.promo-container');
+    sr.reveal('.products-container');
+    sr.reveal('.about-container');
+  }
 
-    <Promo
-      baseClass={baseClass}
-      {...promo}
-      imageColumns={5}
-    />
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
 
-    <Products
-      baseClass={baseClass}
-      {...products}
-      productColSize='one-third'
-    />
+        <Hero
+          baseClass={baseClass}
+          isFullHeight
+          navBar
+          {...this.props.hero}
+        />
 
-    <About
-      baseClass={baseClass}
-      {...about}
-    />
-  </div>
-);
+        <Promo
+          baseClass={baseClass}
+          {...this.props.promo}
+          imageColumns={5}
+        />
+
+        <Products
+          baseClass={baseClass}
+          {...this.props.products}
+          productColSize='one-third'
+        />
+
+        <About
+          baseClass={baseClass}
+          {...this.props.about}
+        />
+      </div>
+    );
+  }
+}
 
 HomePageTemplate.propTypes = {
   meta_title: PropTypes.string,

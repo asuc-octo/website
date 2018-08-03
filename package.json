@@ -29,7 +29,8 @@
     "prop-types": "^15.6.1",
     "react-disqus-comments": "^1.1.1",
     "react-helmet": "^5.2.0",
-    "react-share": "2.1.0"
+    "react-share": "2.1.0",
+    "scrollreveal": "^3.4.0"
   },
   "license": "MIT",
   "main": "n/a",
