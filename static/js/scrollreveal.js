@@ -1,5 +1,4 @@
-import ScrollReveal from 'scrollreveal';
-
+/* eslint-disable */
 const config = {
   origin: 'bottom',
   duration: 500,
@@ -10,6 +9,5 @@ const config = {
   viewFactor: 0.2,
 };
 
-let sr = ScrollReveal(config);
-
-export default sr;
+// eslint-disable-next-line no-use-before-define
+window.sr = ScrollReveal(config);

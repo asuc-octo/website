@@ -38,7 +38,9 @@ export default class HTML extends Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
+          <script src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js' />
           <script src={__PATH_PREFIX__ + '/js/toggle.js'} />
+          <script src={__PATH_PREFIX__ + '/js/scrollreveal.js'} />
         </body>
       </html>
     );

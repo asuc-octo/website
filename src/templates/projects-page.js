@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Products from '../components/Products';
@@ -15,8 +14,8 @@ let baseClass = 'projectsPage';
 
 class ProjectsPageTemplate extends Component {
   componentDidMount () {
-    sr.reveal('.products-container');
-    sr.reveal('.product', { duration: 2000 }, 100);
+    window.sr.reveal('.products-container');
+    window.sr.reveal('.product', { duration: 2000 }, 100);
   }
 
   render () {

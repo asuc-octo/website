@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
@@ -20,12 +19,12 @@ let baseClass = 'berkeleyMobile';
 
 class BerkeleyMobileTemplate extends Component {
   componentDidMount () {
-    sr.reveal('.hero-body');
-    sr.reveal('.promo-container');
-    sr.reveal('.products-container');
-    sr.reveal('.product', { duration: 1500 }, 100);
-    sr.reveal('.promo-container');
-    sr.reveal('.about-container');
+    window.sr.reveal('.hero-body');
+    window.sr.reveal('.promo-container');
+    window.sr.reveal('.products-container');
+    window.sr.reveal('.product', { duration: 1500 }, 100);
+    window.sr.reveal('.promo-container');
+    window.sr.reveal('.about-container');
   }
 
   render () {

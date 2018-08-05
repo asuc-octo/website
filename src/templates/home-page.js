@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Hero from '../components/Hero';
@@ -20,10 +19,10 @@ let baseClass = 'homePage';
 
 export class HomePageTemplate extends Component {
   componentDidMount () {
-    sr.reveal('.hero-body');
-    sr.reveal('.promo-container');
-    sr.reveal('.products-container');
-    sr.reveal('.about-container');
+    window.sr.reveal('.hero-body');
+    window.sr.reveal('.promo-container');
+    window.sr.reveal('.products-container');
+    window.sr.reveal('.about-container');
   }
 
   render () {

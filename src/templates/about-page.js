@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sr from '../js/scrollreveal';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import About from '../components/About';
@@ -20,9 +19,9 @@ let baseClass = 'aboutPage';
 
 class AboutPageTemplate extends Component {
   componentDidMount () {
-    sr.reveal('.hero-body');
-    sr.reveal('.about-container');
-    sr.reveal('.profile', { duration: 1500 }, 75);
+    window.sr.reveal('.hero-body');
+    window.sr.reveal('.about-container');
+    window.sr.reveal('.profile', { duration: 1500 }, 75);
   }
 
   render () {
