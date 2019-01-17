@@ -1,0 +1,30 @@
+.about-berkeleyTime.about
+{
+  .about
+  {
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+    }
+
+    &-description
+    {
+      white-space: pre-line;
+
+      margin-bottom: $spaced-margin * 2;
+    }
+
+    &-linkWrapper
+    {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-button
+    {
+      @extend .Button;
+      @extend .Button--inverted;
+    }
+  }
+}

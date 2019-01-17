@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -16,18 +16,18 @@ import {
   GooglePlusIcon,
   LinkedinIcon,
   RedditIcon,
-} from 'react-share'
-import config from '../../../meta/config'
-import './styles.scss'
+} from 'react-share';
+import config from '../../../meta/config';
+import './styles.scss';
 
 class Share extends Component {
   render () {
-    const {title, slug, excerpt, mobile} = this.props
-    const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-    const url = config.siteUrl + realPrefix + slug
+    const {title, slug, excerpt, mobile} = this.props;
+    const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+    const url = config.siteUrl + realPrefix + slug;
 
-    const iconSize = mobile ? 36 : 48
-    const filter = count => (count > 0 ? count : '')
+    const iconSize = mobile ? 36 : 48;
+    const filter = count => (count > 0 ? count : '');
 
     return (
       <div className='social-links'>
@@ -66,8 +66,8 @@ class Share extends Component {
           <TelegramIcon round size={iconSize} />
         </TelegramShareButton>
       </div>
-    )
+    );
   }
 }
 
-export default Share
+export default Share;

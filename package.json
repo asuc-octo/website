@@ -2,7 +2,7 @@
   "name": "gatsby-starter-business",
   "description": "Gatsby Business Website Starter",
   "version": "1.0.0",
-  "author": "Vaibhav Sharma",
+  "author": "ASUC OCTO",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "bulma": "^0.6.2",
@@ -29,7 +29,8 @@
     "prop-types": "^15.6.1",
     "react-disqus-comments": "^1.1.1",
     "react-helmet": "^5.2.0",
-    "react-share": "2.1.0"
+    "react-share": "2.1.0",
+    "scrollreveal": "^4.0.0-beta.32"
   },
   "license": "MIT",
   "main": "n/a",
@@ -38,7 +39,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "lint": "eslint --ext js,jsx --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext js,jsx --ignore-path .gitignore .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

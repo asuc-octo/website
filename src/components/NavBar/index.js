@@ -1,50 +1,36 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
-const NavBar = () => {
+const NavBar = ({ className }) => {
   return (
-    <nav className='navbar is-fixed-top' aria-label='main navigation'>
-      <div className='navbar-brand'>
-        <Link to='/' className='navbar-item'>
-                    Gatsby Starter Business
-        </Link>
-        <button className='button navbar-burger' data-target='navMenu'>
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-      <div className='navbar-menu' id='navMenu'>
-        <div className='navbar-start'>
-          <Link className='navbar-item' to='/pricing'>
-                        Pricing
+    <nav className={'navbar is-transparent ' + (className || '')} aria-label='main navigation'>
+      <div className='container'>
+        <div className='navbar-brand'>
+          <Link to='/' className='navbar-item'>
+            ASUC OCTO
           </Link>
-          <Link className='navbar-item' to='/about'>
-                        About
-          </Link>
-          <Link className='navbar-item' to='/blog'>
-                        Blog
-          </Link>
+          <span className='navbar-burger burger' data-target='navMenu'>
+            <span />
+            <span />
+            <span />
+          </span>
         </div>
-        <div className='navbar-end'>
-          <div className='navbar-item'>
-            <div className='field is-grouped'>
-              <p className='control'>
-                <Link
-                  className='button is-primary is-outlined'
-                  to='/contact'>
-                                    Contact Us
-                </Link>
-              </p>
-            </div>
+        <div className='navbar-menu' id='navMenu'>
+          <div className='navbar-end'>
+            <Link className='navbar-item' to='/about'>
+              About
+            </Link>
+            <Link className='navbar-item' to='/projects'>
+              Projects
+            </Link>
+            <Link className='navbar-item' to='/'>
+              Recruitment
+            </Link>
           </div>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

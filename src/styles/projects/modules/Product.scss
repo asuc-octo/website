@@ -1,0 +1,27 @@
+.products-projectsPage.products
+{
+  .product
+  {
+    &-text
+    {
+      $opacity-value: 0.5;
+
+      background: linear-gradient(rgba(46, 115, 245, $opacity-value), rgba(255, 167, 211, $opacity-value));
+    }
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h2;
+
+      text-align: center;
+      color: white;
+    }
+
+    &-description
+    {
+      text-align: center;
+      color: white;
+    }
+  }
+}

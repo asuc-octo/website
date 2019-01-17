@@ -1,15 +1,12 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import config from '../../../meta/config'
-import Helmet from 'react-helmet'
+import React from 'react';
+import config from '../../../meta/config';
+import Helmet from 'react-helmet';
 
 const SE0 = ({title, meta_title, meta_desc, cover, slug}) => {
-  let postURL = config.siteUrl + slug
-  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-  let image = config.siteUrl + realPrefix + cover
-  const blogURL = config.siteUrl + config.pathPrefix
+  let postURL = config.siteUrl + slug;
+  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+  let image = config.siteUrl + realPrefix + cover;
+  const blogURL = config.siteUrl + config.pathPrefix;
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
@@ -18,7 +15,7 @@ const SE0 = ({title, meta_title, meta_desc, cover, slug}) => {
       name: title,
       alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
     },
-  ]
+  ];
 
   schemaOrgJSONLD.push([
     {
@@ -49,7 +46,7 @@ const SE0 = ({title, meta_title, meta_desc, cover, slug}) => {
       },
       meta_desc,
     },
-  ])
+  ]);
 
   return (
     <Helmet>
@@ -81,7 +78,7 @@ const SE0 = ({title, meta_title, meta_desc, cover, slug}) => {
       <meta name='twitter:description' content={meta_desc} />
       <meta name='twitter:image' content={image} />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SE0
+export default SE0;

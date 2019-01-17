@@ -1,33 +1,30 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React, {Component} from 'react'
-import favicon from './img/favicon.ico'
+import React, {Component} from 'react';
+import favicon from './img/favicon.ico';
 
-let inlinedStyles = ''
+let inlinedStyles = '';
 if (process.env.NODE_ENV === 'production') {
   try {
     /* eslint import/no-webpack-loader-syntax: off */
-    inlinedStyles = require('!raw-loader!../public/styles.css')
+    inlinedStyles = require('!raw-loader!../public/styles.css');
   } catch (e) {
     /* eslint no-console: "off" */
-    console.log(e)
+    console.log(e);
   }
 }
 
 export default class HTML extends Component {
   render () {
-    let css
+    let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id='gatsby-inlined-css'
           dangerouslySetInnerHTML={{__html: inlinedStyles}}
         />
-      )
+      );
     }
     return (
-      <html lang='en' className='has-navbar-fixed-top'>
+      <html lang='en'>
         <head>
           <meta charSet='utf-8' />
           <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
@@ -41,9 +38,11 @@ export default class HTML extends Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
+          <script src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js' />
           <script src={__PATH_PREFIX__ + '/js/toggle.js'} />
+          <script src={__PATH_PREFIX__ + '/js/scrollreveal.js'} />
         </body>
       </html>
-    )
+    );
   }
 }

@@ -1,33 +1,33 @@
 @mixin Button
 {
-  display: inline-block;
-  height: 25px;
   font-family: $font-family-primary;
   font-weight: $font-weight-regular;
   border: 2px solid $brand-primary;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 6px 14px;
 }
 
 @mixin Button--primary
 {
   background-color: $brand-primary;
-  color: white;
+  color: transparent;
 
   &:hover
   {
     background-color: $brand-primary-light;
+    border-color: $brand-primary-light;
   }
 }
 
 @mixin Button--inverted
 {
-  background-color: white;
+  background-color: transparent;
   color: $brand-primary;
 
   &:hover
   {
     color: $brand-primary-light;
+    border-color: $brand-primary-light;
   }
 }
 

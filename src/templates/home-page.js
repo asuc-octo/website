@@ -1,94 +1,84 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Offerings from '../components/Offerings'
-import Testimonials from '../components/Testimonials'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Hero from '../components/Hero';
+import Promo from '../components/Promo';
+import Products from '../components/Products';
+import About from '../components/About';
 
-export const HomePageTemplate = ({
-  title,
-  heading,
-  description,
-  offerings,
-  meta_title,
-  meta_description,
-  testimonials,
-}) => (
-  <div>
-    <Helmet>
-      <title>{meta_title}</title>
-      <meta name='description' content={meta_description} />
-    </Helmet>
-    <section className='hero is-primary is-bold'>
-      <div className='hero-body'>
-        <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
+import '../styles/home/styles.scss';
+
+let baseClass = 'homePage';
+
+// meta_title,
+// meta_description,
+// hero,
+// promo,
+// products,
+// about,
+
+export class HomePageTemplate extends Component {
+  componentDidMount () {
+    window.sr.reveal('.hero-body');
+    window.sr.reveal('.promo-container');
+    window.sr.reveal('.products-container');
+    window.sr.reveal('.about-container');
+  }
+
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
+
+        <Hero
+          baseClass={baseClass}
+          isFullHeight
+          navBar
+          {...this.props.hero}
+        />
+
+        <Promo
+          baseClass={baseClass}
+          {...this.props.promo}
+          imageColumns={5}
+        />
+
+        <Products
+          baseClass={baseClass}
+          {...this.props.products}
+          productColSize='one-third'
+        />
+
+        <About
+          baseClass={baseClass}
+          {...this.props.about}
+        />
       </div>
-    </section>
-    <section className='section section--gradient'>
-      <div className='container'>
-
-        <div className='section'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <div>
-                  <h3 className='has-text-weight-semibold is-size-2'>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
-                </div>
-                <Offerings gridItems={offerings.blurbs} />
-                <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
-                <Testimonials testimonials={testimonials} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
-
-HomePageTemplate.propTypes = {
-  title: PropTypes.string,
-  meta_title: PropTypes.string,
-  meta_description: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  offerings: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  testimonials: PropTypes.array,
-
+    );
+  }
 }
 
+HomePageTemplate.propTypes = {
+  meta_title: PropTypes.string,
+  meta_description: PropTypes.string,
+  hero: PropTypes.object,
+  promo: PropTypes.object,
+  products: PropTypes.object,
+  about: PropTypes.object,
+};
+
 const HomePage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+  const {frontmatter} = data.markdownRemark;
 
   return (
     <HomePageTemplate
-      title={frontmatter.title}
-      meta_title={frontmatter.meta_title}
-      meta_description={frontmatter.meta_description}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
-      offerings={frontmatter.offerings}
-      testimonials={frontmatter.testimonials}
+      {...frontmatter}
     />
-  )
-}
+  );
+};
 
 HomePage.propTypes = {
   data: PropTypes.shape({
@@ -96,30 +86,51 @@ HomePage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default HomePage
+export default HomePage;
 
 export const pageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
+        heading
         meta_title
         meta_description
-        heading
-        description
-        offerings {
-          blurbs {
-            image
+        hero {
+          title
+          subtitle
+          buttons {
             text
+            linkUrl
           }
         }
-        testimonials {
-          author
-          quote
+        promo {
+          title
+          description
+          image
+          linkText
+          linkTo
+        }
+        products {
+          title
+          description
+          linkText
+          linkTo
+          products {
+            title
+            description
+            imgUrl
+            linkUrl
+          }
+        }
+        about {
+          title
+          description
+          linkText
+          linkTo
         }
       }
     }
   }
-`
+`;

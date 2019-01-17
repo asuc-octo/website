@@ -1,0 +1,30 @@
+.products-berkeleyTime.products
+{
+  .products
+  {
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+
+      margin-bottom: $spaced-margin * 2;
+    }
+
+    &-description
+    {
+      white-space: pre-line;
+    }
+
+    &-linkWrapper
+    {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-button
+    {
+      @extend .Button;
+      @extend .Button--inverted;
+    }
+  }
+}

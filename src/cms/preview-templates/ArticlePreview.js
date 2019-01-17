@@ -1,9 +1,6 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import {ArticleTemplate} from '../../templates/article-page'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {ArticleTemplate} from '../../templates/article-page';
 
 const ArticlePreview = ({entry, widgetFor}) => (
   <ArticleTemplate
@@ -15,13 +12,13 @@ const ArticlePreview = ({entry, widgetFor}) => (
     title={entry.getIn(['data', 'title'])}
     slug={entry.getIn(['data', 'slug'])}
   />
-)
+);
 
 ArticlePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
-}
+};
 
-export default ArticlePreview
+export default ArticlePreview;

@@ -1,0 +1,6 @@
+@import "~breakpoint-sass";
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

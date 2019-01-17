@@ -1,14 +1,14 @@
 @mixin Heading--h1
 {
   font-weight: $font-weight-bold;
-  font-size: 39px;
+  font-size: 3rem;
   line-height: 1.2;
 }
 
 @mixin Heading--h2
 {
-  font-weight: $font-weight-bold;
-  font-size: 27.5px;
+  font-weight: $font-weight-semibold;
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 

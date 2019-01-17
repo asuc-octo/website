@@ -2,7 +2,8 @@ import Typography from 'typography';
 
 const typography = new Typography({
   baseFontSize: '16px',
-  scaleRatio: '2',
+  baseLineHeight: 1,
+  scaleRatio: 5,
   googleFonts: [
     {
       name: 'Barlow',
@@ -20,7 +21,9 @@ const typography = new Typography({
   bodyColor: '#2c2c2c',
   bodyWeight: '400',
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    // More styles here
+    p: {
+      lineHeight: 2,
+    },
   }),
 });
 

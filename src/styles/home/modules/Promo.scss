@@ -1,0 +1,27 @@
+.promo-homePage.promo
+{
+  .promo
+  {
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+    }
+
+    &-description
+    {
+      white-space: pre-line;
+    }
+
+    &-button
+    {
+      @extend .Button;
+      @extend .Button--inverted;
+    }
+
+    &-content
+    {
+      padding: 0 $padded-padding * 2;
+    }
+  }
+}

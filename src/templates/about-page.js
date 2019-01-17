@@ -1,85 +1,158 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Content, {HTMLContent} from '../components/Content'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import About from '../components/About';
+import Profiles from '../components/Profiles';
 
-export const AboutPageTemplate = ({title, content, contentComponent}) => {
-  const PageContent = contentComponent || Content
+import '../styles/about/styles.scss';
 
-  return (
-    <div>
-      <section className='hero is-primary is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <div className='columns'>
-              <div className='column is-10 is-offset-1'>
-                <div className='section'>
-                  <h1 className='title'>
-                    {title}
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className='section section--gradient'>
-        <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <PageContent className='content' content={content} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
+let baseClass = 'aboutPage';
+
+// Pull from markdown later
+
+// title,
+// subtitle,
+// meta_title,
+// meta_description,
+// mission,
+// team,
+
+class AboutPageTemplate extends Component {
+  componentDidMount () {
+    window.sr.reveal('.hero-body');
+    window.sr.reveal('.about-container');
+    window.sr.reveal('.profile', { duration: 1500 }, 75);
+  }
+
+  render () {
+    return (
+      <div className={`${baseClass} pageContainer`}>
+        <Helmet>
+          <title>{this.props.meta_title}</title>
+          <meta name='description' content={this.props.meta_description} />
+        </Helmet>
+
+        <About
+          baseClass={baseClass}
+          title={this.props.title}
+          description={this.props.subtitle}
+        />
+
+        <About
+          baseClass={baseClass}
+          classModifier='mission'
+          {...this.props.mission}
+        />
+
+        <Profiles
+          baseClass={baseClass}
+          classModifier='chief'
+          title={this.props.team.chief.title}
+          profiles={this.props.team.chief.members}
+          profileColSize='one-third'
+        />
+
+        <Profiles
+          baseClass={baseClass}
+          title={this.props.team.berkeleyTime.title}
+          profiles={this.props.team.berkeleyTime.members}
+          profileColSize='one-third'
+        />
+
+        <Profiles
+          baseClass={baseClass}
+          title={this.props.team.berkeleyMobile.title}
+          profiles={this.props.team.berkeleyMobile.members}
+          profileColSize='one-third'
+        />
+
+        <Profiles
+          baseClass={baseClass}
+          classModifier='companies'
+          title={this.props.team.companies.title}
+          profiles={this.props.team.companies.brands}
+          profileColSize='one-third'
+        />
+
+      </div>
+    );
+  }
 }
 
 AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  meta_title: PropTypes.string,
+  meta_description: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  mission: PropTypes.object,
+  team: PropTypes.object,
+};
 
 const AboutPage = ({data}) => {
-  const {markdownRemark: post} = data
+  const { frontmatter } = data.markdownRemark;
 
   return (
-    <div>
-      <Helmet>
-        <title>{post.frontmatter.meta_title}</title>
-        <meta name='description' content={post.frontmatter.meta_description} />
-      </Helmet>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
-    </div>
-  )
-}
+    <AboutPageTemplate
+      {...frontmatter}
+    />
+  );
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
+        subtitle
         meta_title
         meta_description
+        mission {
+          title
+          description
+        }
+        team {
+          chief {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          berkeleyTime {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          berkeleyMobile {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          companies {
+            title
+            brands {
+              imgUrl
+            }
+          }
+        }
       }
     }
   }
-`
+`;

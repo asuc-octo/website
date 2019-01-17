@@ -1,37 +1,34 @@
-/**
- * Created by vaibhav on 1/4/18
- */
-import React, {Component} from 'react'
-import ReactDisqusComments from 'react-disqus-comments'
-import config from '../../../meta/config'
+import React, {Component} from 'react';
+import ReactDisqusComments from 'react-disqus-comments';
+import config from '../../../meta/config';
 
 class Disqus extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       toasts: [],
-    }
-    this.notifyAboutComment = this.notifyAboutComment.bind(this)
-    this.onSnackbarDismiss = this.onSnackbarDismiss.bind(this)
+    };
+    this.notifyAboutComment = this.notifyAboutComment.bind(this);
+    this.onSnackbarDismiss = this.onSnackbarDismiss.bind(this);
   }
 
   onSnackbarDismiss () {
-    const [, ...toasts] = this.state.toasts
-    this.setState({toasts})
+    const [, ...toasts] = this.state.toasts;
+    this.setState({toasts});
   }
 
   notifyAboutComment () {
-    const toasts = this.state.toasts.slice()
-    toasts.push({text: 'New comment available!'})
-    this.setState({toasts})
+    const toasts = this.state.toasts.slice();
+    toasts.push({text: 'New comment available!'});
+    this.setState({toasts});
   }
 
   render () {
-    const {title, slug} = this.props
+    const {title, slug} = this.props;
     if (!config.disqusShortname) {
-      return null
+      return null;
     }
-    const url = config.siteUrl + config.pathPrefix + slug
+    const url = config.siteUrl + config.pathPrefix + slug;
     return (
       <ReactDisqusComments
         shortname={config.disqusShortname}
@@ -40,8 +37,8 @@ class Disqus extends Component {
         url={url}
         onNewComment={this.notifyAboutComment}
       />
-    )
+    );
   }
 }
 
-export default Disqus
+export default Disqus;
