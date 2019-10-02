@@ -58,7 +58,7 @@ team:
       position: Backend Engineer
       imgUrl: /img/sean-meng.jpg
     - name: Eli Wu
-      position: Backend Engineer and Bartending Lead
+      position: Backend Engineer & Bartending Lead
       imgUrl: /img/eli-wu.jpg
     - name: Anson Tsai
       position: Backend Engineer
@@ -74,7 +74,7 @@ team:
       imgUrl: /img/grace-luo.jpg
     - name: Chloe Liu
       position: Frontend Engineer
-      imgUrl: /img/chloe-liu.jpeg
+      imgUrl: /img/chloe-liu.jpg
     - name: Christina Shao
       position: Frontend Engineer
       imgUrl: /img/christina-shao.jpg
@@ -101,46 +101,46 @@ team:
       imgUrl: /img/yiling-kao.jpg
     - name: Tom Cheah
       position: Backend Engineer
-      imgUrl: /img/tom-cheah.png
+      imgUrl: /img/tom-cheah.jpg
     - name: Kevin Liu
       position: Backend Engineer
-      imgUrl: /img/kevin-liu.png
+      imgUrl: /img/kevin-liu.jpg
     - name: RJ Pimentel
       position: iOS Lead
-      imgUrl: /img/rj-pimentel.png
+      imgUrl: /img/rj-pimentel.jpg
     - name: Kevin Hu
       position: iOS Engineer
-      imgUrl: /img/kevin-hu.png
+      imgUrl: /img/user.png
     - name: Anna Gao
       position: iOS Engineer
-      imgUrl: /img/anna-gao.png
+      imgUrl: /img/anna-gao.jpg
     - name: Oscar Bjorkman
       position: iOS Engineer
-      imgUrl: /img/oscar-bjorkman.png
+      imgUrl: /img/oscar-bjorkman.jpg
     - name: Anny Yang
       position: Android Engineer
-      imgUrl: /img/anny-yang.png
+      imgUrl: /img/anny-yang.jpg
     - name: Alex Kwon
       position: Android Engineer
-      imgUrl: /img/alex-kwon.png
+      imgUrl: /img/alex-kwon.jpg
     - name: Akshat Jain
       position: Frontend Engineer
-      imgUrl: /img/akshat-jain.png
+      imgUrl: /img/akshat-jain.jpg
     - name: Marleah Puckett
       position: Designer
-      imgUrl: /img/marleah-puckett.png
+      imgUrl: /img/marleah-puckett.jpg
     - name: Jacqueline Angelina
       position: Designer
-      imgUrl: /img/jacqueline-angelina.png
+      imgUrl: /img/jacqueline-angelina.jpg
   beehive:
     title: Beehive
     members:
     - name: Leon Ming
       position: Product Manager
-      imgUrl: /img/leon-ming.png
+      imgUrl: /img/leon-ming.jpg
     - name: Rick Zhang
       position: Software Engineer
-      imgUrl: /img/rick-zhang.png
+      imgUrl: /img/rick-zhang.jpg
     - name: Kaitlyn Gunadhi
       position: Software Engineer
       imgUrl: /img/kaitlyn-gunadhi.jpg
@@ -152,19 +152,19 @@ team:
       imgUrl: /img/aakash-shukla.jpg
     - name: Atharva Patil
       position: Software Engineer
-      imgUrl: /img/atharva-patil.png
+      imgUrl: /img/atharva-patil.jpg
     - name: Anik Gupta
       position: Software Engineer
-      imgUrl: /img/anik-gupta.png
+      imgUrl: /img/anik-gupta.jpg
     - name: Willy Wu
       position: Marketing Lead
       imgUrl: /img/willy-wu.jpg
     - name: Evelyn Wong
       position: Marketing Associate
-      imgUrl: /img/evelyn-wong.png
+      imgUrl: /img/evelyn-wong.jpg
     - name: Atharva Mehendale
       position: Design Lead
-      imgUrl: /img/atharva-mehendale.png
+      imgUrl: /img/atharva-mehendale.jpg
   companies:
     title: Where We've Gone
     brands:

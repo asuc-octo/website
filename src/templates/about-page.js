@@ -46,7 +46,6 @@ class AboutPageTemplate extends Component {
 
         <Profiles
           baseClass={baseClass}
-          classModifier='chief'
           title={this.props.team.chief.title}
           profiles={this.props.team.chief.members}
           profileColSize='one-third'

@@ -19,6 +19,12 @@
     {
       margin: $spaced-margin 0;
       font-weight: $font-weight-semibold;
+      text-align: center;
+    }
+
+    &-position
+    {
+      text-align: center;
     }
   }
 }
