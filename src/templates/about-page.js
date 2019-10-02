@@ -68,6 +68,13 @@ class AboutPageTemplate extends Component {
 
         <Profiles
           baseClass={baseClass}
+          title={this.props.team.beehive.title}
+          profiles={this.props.team.beehive.members}
+          profileColSize='one-third'
+        />
+
+        <Profiles
+          baseClass={baseClass}
           classModifier='companies'
           title={this.props.team.companies.title}
           profiles={this.props.team.companies.brands}
@@ -138,6 +145,14 @@ export const aboutPageQuery = graphql`
             }
           }
           berkeleyMobile {
+            title
+            members {
+              name
+              position
+              imgUrl
+            }
+          }
+          beehive {
             title
             members {
               name

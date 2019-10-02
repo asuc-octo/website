@@ -1,12 +1,9 @@
 ---
 templateKey: projects-page
 title: Projects
-meta_title: Projects | Gatsby Starter Business
+meta_title: Projects | ASUC OCTO
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Learn more about what ASUC OCTO has been working on.
 projects:
   title: Projects
   description: >-
@@ -16,20 +13,20 @@ projects:
       description: >-
         Berkeley’s most popular online course catalog web app.
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
+      linkUrl: //
     - title: Berkeley Mobile
       description: >-
-        Berkeley’s most popular online course catalog web app.
+        Berkeley’s official student-created mobile app.
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
-    - title: BerkeleyTime
+      linkUrl: //
+    - title: Beehive
       description: >-
-        Berkeley’s most popular online course catalog web app.
+        Berkeley's undergraduate research opportunity platform.
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
-    - title: Berkeley Mobile
+      linkUrl: //
+    - title: Coming Soon
       description: >-
-        Berkeley’s most popular online course catalog web app.
+        OCTO is always working on new projects, stay tuned!
       imgUrl: /img/products-grid3.jpg
-      linkUrl: /
+      linkUrl: //
 ---

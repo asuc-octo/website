@@ -13,7 +13,7 @@ module.exports = {
   userTwitter: '',
   userLocation: 'Berkeley, California',
   userDescription: '',
-  copyright: 'Copyright © ASUC Office of the CTO 2018',
+  copyright: 'Copyright © ASUC Office of the CTO 2019',
   themeColor: '#2e73f5',
   backgroundColor: '#ffffff',
 };

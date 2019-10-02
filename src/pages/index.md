@@ -25,7 +25,7 @@ promo:
 products:
   title: Projects
   description: >-
-    Right now, we’re working on four exciting projects: Berkeley Mobile, Berkeley Time, Hermione, and Digital Service.
+    Right now, we’re working on three exciting projects: Berkeley Mobile, Berkeley Time, and Beehive.
   linkText: View our Projects
   linkTo: /projects
   products:
@@ -36,12 +36,12 @@ products:
       linkUrl: /berkeleyTime
     - title: Berkeley Mobile
       description: >-
-        Berkeley's most popular course catalog
+        Berkeley's official student-created mobile app
       imgUrl: /img/products-grid3.jpg
       linkUrl: /berkeleyMobile
-    - title: BerkeleyTime
+    - title: Beehive
       description: >-
-        Berkeley's most popular course catalog
+        Berkeley's undergraduate research opportunity platform
       imgUrl: /img/products-grid3.jpg
       linkUrl: /
 about:

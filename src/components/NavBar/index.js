@@ -23,9 +23,6 @@ const NavBar = ({ className }) => {
             <Link className='navbar-item' to='/projects'>
               Projects
             </Link>
-            <Link className='navbar-item' to='/'>
-              Recruitment
-            </Link>
           </div>
         </div>
       </div>
