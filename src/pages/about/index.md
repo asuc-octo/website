@@ -14,7 +14,7 @@ team:
     members:
     - name: Leon Ming
       position: Chief Technology Officer and Beehive PM
-      imgUrl: /img/leon-ming.png
+      imgUrl: /img/leon-ming.jpg
     - name: Richard Liu
       position: Chief of Staff
       imgUrl: /img/richard-liu.jpg
