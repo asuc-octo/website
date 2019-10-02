@@ -32,22 +32,24 @@ products:
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/products-grid3.jpg
-      linkUrl: /berkeleyTime
+      imgUrl: /img/berkeleytime.jpg
+      linkUrl: /
     - title: Berkeley Mobile
       description: >-
         Berkeley's official student-created mobile app
-      imgUrl: /img/products-grid3.jpg
-      linkUrl: /berkeleyMobile
+      imgUrl: /img/berkeley-mobile.jpg
+      linkUrl: /
     - title: Beehive
       description: >-
         Berkeley's undergraduate research opportunity platform
-      imgUrl: /img/products-grid3.jpg
+      imgUrl: /img/beehive.jpg
       linkUrl: /
 about:
   title: Join Us
-  description: >-
+  oldDescription: >-
     Interested in web development, mobile development, product management or design? We’re looking for new members of the OCTO team! Click below to see our recruitment timeline.
-  linkText: Recruitment Process
-  linkTo: /
+  oldLinkText: Recruitment Timeline
+  oldLinkTo: /
+  description: >-
+    Interested in web development, mobile development, product management, or design? We look for new members to join OCTO at the beginning of each fall!
 ---

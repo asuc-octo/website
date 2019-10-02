@@ -12,19 +12,33 @@ const Product = ({
   linkUrl,
   columnSize,
 }) => {
-  return (
-    <div className={'column is-' + columnSize}>
-      <div className='product'>
-        <Link to={linkUrl}>
+  if (linkUrl !== "/") {
+    return (
+      <div className={'column is-' + columnSize}>
+        <div className='product'>
+          <Link to={linkUrl}>
+            <img className='product-image' src={imgUrl} />
+            <div className='product-text'>
+              <h3 className='product-title'>{title}</h3>
+              <p className='product-description'>{description}</p>
+            </div>
+          </Link>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className={'column is-' + columnSize}>
+        <div className='product'>
           <img className='product-image' src={imgUrl} />
           <div className='product-text'>
             <h3 className='product-title'>{title}</h3>
             <p className='product-description'>{description}</p>
           </div>
-        </Link>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 Product.propTypes = {
