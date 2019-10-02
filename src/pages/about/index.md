@@ -10,10 +10,10 @@ mission:
   description: The ASUC Office of the Chief Technology Officer was founded in the spring of 2014 to address the critical need for student voices in rapidly changing campus technology spaces through advocacy, awareness, and actual technology product development.
 team:
   chief:
-    title: Our Team
+    title: Our Board
     members:
     - name: Leon Ming
-      position: Chief Technology Officer
+      position: Chief Technology Officer and Beehive PM
       imgUrl: /img/leon-ming.png
     - name: Richard Liu
       position: Chief of Staff
@@ -21,6 +21,15 @@ team:
     - name: Grace Luo
       position: Chief of Staff
       imgUrl: /img/grace-luo.jpg
+    - name: Michael Li
+      position: BerkeleyTime PM
+      imgUrl: /img/michael-li.jpg
+    - name: Sid Karia
+      position: Berkeley Mobile PM
+      imgUrl: /img/sid-karia.jpg
+    - name: Sudarshan Gopal
+      position: Berkeley Mobile PM
+      imgUrl: /img/sudarshan-gopal.jpg
   berkeleyTime:
     title: BerkeleyTime
     members:
