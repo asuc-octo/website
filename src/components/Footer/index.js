@@ -15,9 +15,12 @@ const Footer = () => {
             </div>
             <div className='level-right'>
               <div className='footer-links'>
-                <div className='footer-link'><Link to='/'>Contact</Link></div>
-                <div className='footer-link'><Link to='/'>Facebook</Link></div>
-                <div className='footer-link'><Link to='/'>Recruitment</Link></div>
+                <div className='footer-link'><Link to='/contact'>Contact</Link></div>
+                <div className='footer-link'>
+                  <a href="https://facebook.com/asucocto" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                </div>
               </div>
             </div>
           </div>

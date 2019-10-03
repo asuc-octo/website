@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Contact from '../components/Contact';
+import ContactForm from '../components/ContactForm';
+
+import '../styles/contact/styles.scss';
 
 export const ContactPageTemplate = ({
   title,
   subtitle,
   meta_title,
   meta_description,
-  contacts,
 }) => {
   return (
-    <div>
+    <div class="contactPage">
       <Helmet>
         <title>{meta_title}</title>
         <meta name='description' content={meta_description} />
@@ -35,11 +36,7 @@ export const ContactPageTemplate = ({
         </div>
       </section>
       <section className='section'>
-        <div className='container'>
-          {contacts.map((contact, id) =>
-            <Contact key={id} email={contact.email} description={contact.description} />
-          )}
-        </div>
+        <ContactForm />
       </section>
     </div>
   );
@@ -50,7 +47,6 @@ ContactPageTemplate.propTypes = {
   subtitle: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  contacts: PropTypes.array,
 
 };
 
@@ -62,7 +58,6 @@ const ContactPage = ({data}) => {
       subtitle={frontmatter.subtitle}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      contacts={frontmatter.contacts}
     />
   );
 };
@@ -86,10 +81,6 @@ export const contactPageQuery = graphql`
         meta_title
         meta_description
         heading
-        contacts {
-          email
-          description
-        }
       }
     }
   }

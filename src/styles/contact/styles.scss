@@ -1,0 +1,10 @@
+//Common styles
+@import "../common/styles.scss";
+
+//Local styles
+.contactPage
+{
+  @import "./mixins";
+  @import "./module";
+  @import "./theme";
+}

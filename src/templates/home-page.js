@@ -127,8 +127,6 @@ export const pageQuery = graphql`
         about {
           title
           description
-          linkText
-          linkTo
         }
       }
     }
