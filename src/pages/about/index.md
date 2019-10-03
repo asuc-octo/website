@@ -171,4 +171,20 @@ team:
     - imgUrl: /img/google.png
     - imgUrl: /img/airbnb.png
     - imgUrl: /img/apple.png
+    - imgUrl: /img/amazon.png
+    - imgUrl: /img/microsoft.png
+    - imgUrl: /img/facebook.png
+    - imgUrl: /img/twitter.png
+    - imgUrl: /img/tesla.png
+    - imgUrl: /img/uber.png
+    - imgUrl: /img/lyft.png
+    - imgUrl: /img/intel.png
+    - imgUrl: /img/salesforce.png
+    - imgUrl: /img/databricks.png
+    - imgUrl: /img/palantir.png
+    - imgUrl: /img/adobe.png
+    - imgUrl: /img/yelp.png
+    - imgUrl: /img/docusign.png
+    - imgUrl: /img/affirm.png
+    - imgUrl: /img/goldman.png
 ---
