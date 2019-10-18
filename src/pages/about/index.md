@@ -100,23 +100,29 @@ team:
       position: Advisor
       imgUrl: /img/yiling-kao.jpg
     - name: Tom Cheah
-      position: Backend Engineer
+      position: Backend Lead
       imgUrl: /img/tom-cheah.jpg
     - name: Kevin Liu
       position: Backend Engineer
       imgUrl: /img/kevin-liu.jpg
+    - name: Varun Arora
+      position: Backend Engineer
+      imgUrl: /img/varun-arora.jpg
     - name: RJ Pimentel
       position: iOS Lead
       imgUrl: /img/rj-pimentel.jpg
     - name: Kevin Hu
       position: iOS Engineer
-      imgUrl: /img/user.png
+      imgUrl: /img/kevin-hu.jpg
     - name: Anna Gao
       position: iOS Engineer
       imgUrl: /img/anna-gao.jpg
     - name: Oscar Bjorkman
       position: iOS Engineer
       imgUrl: /img/oscar-bjorkman.jpg
+    - name: Eli Wu
+      position: Android Lead
+      imgUrl: /img/eli-wu.jpg
     - name: Anny Yang
       position: Android Engineer
       imgUrl: /img/anny-yang.jpg
