@@ -77,7 +77,7 @@ class AboutPageTemplate extends Component {
           classModifier='companies'
           title={this.props.team.companies.title}
           profiles={this.props.team.companies.brands}
-          profileColSize='one-fifth'
+          profileColSize='2'
         />
 
       </div>

@@ -6,11 +6,13 @@
     {
       @extend .Heading;
       @extend .Heading--h1;
+      margin-bottom: 10px;
     }
 
     &-description
     {
       white-space: pre-line;
+      line-height: 24pt;
     }
 
     &-button
@@ -42,7 +44,7 @@
 
     &-role
     {
-      margin-bottom: $spaced-margin * 2;
+      margin-bottom: $spaced-margin * 1;
     }
 
     &-roleTitle
@@ -51,6 +53,12 @@
       @extend .Heading--h3;
 
       margin-bottom: 0;
+      line-height: 24pt;
+    }
+
+    &-roleDescription
+    {
+      line-height: 24pt;
     }
 
   }

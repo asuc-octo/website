@@ -7,12 +7,13 @@
       @extend .Heading;
       @extend .Heading--h1;
 
-      margin-bottom: $spaced-margin * 2;
     }
 
     &-description
     {
       white-space: pre-line;
+      margin-bottom: $spaced-margin * 2;
+
     }
 
     &-linkWrapper

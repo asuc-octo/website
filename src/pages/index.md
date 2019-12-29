@@ -32,8 +32,8 @@ products:
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/misc/berkeleytime.jpg
-      linkUrl: /
+      imgUrl: /img/berkeleytime/berkeleytime.jpg
+      linkUrl: /berkeleytime
     - title: Berkeley Mobile
       description: >-
         Berkeley's official student-created mobile app

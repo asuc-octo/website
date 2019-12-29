@@ -7,6 +7,7 @@ import Products from '../components/Products';
 import About from '../components/About';
 
 import '../styles/berkeleyTime/styles.scss';
+import Link from "gatsby-link";
 
 let baseClass = 'berkeleyTime';
 
@@ -16,6 +17,7 @@ let baseClass = 'berkeleyTime';
 // about,
 // features,
 // team,
+// tech,
 // recruitment,
 
 class BerkeleyTimeTemplate extends Component {
@@ -25,6 +27,7 @@ class BerkeleyTimeTemplate extends Component {
     window.sr.reveal('.products-container');
     window.sr.reveal('.product', { duration: 1500 }, 100);
     window.sr.reveal('.promo-container');
+    window.sr.reveal('.products-container');
     window.sr.reveal('.about-container');
   }
 
@@ -47,10 +50,6 @@ class BerkeleyTimeTemplate extends Component {
           {...this.props.about}
           image={this.props.about.imgUrl}
         >
-          <div className='promo-appStoreBadges'>
-            <img className='promo-appStoreBadge' src={this.props.about.appleStore} />
-            <img className='promo-appStoreBadge' src={this.props.about.googlePlay} />
-          </div>
         </Promo>
 
         <Products
@@ -76,6 +75,14 @@ class BerkeleyTimeTemplate extends Component {
           </div>
         </Promo>
 
+      <Products
+          baseClass={baseClass}
+          title={this.props.tech.title}
+          description={this.props.tech.description}
+          products={this.props.tech.images}
+          productColSize={2}
+        />
+
         <About
           baseClass={baseClass}
           {...this.props.recruitment}
@@ -93,6 +100,7 @@ BerkeleyTimeTemplate.propTypes = {
   about: PropTypes.object,
   features: PropTypes.object,
   team: PropTypes.object,
+  tech: PropTypes.object,
   recruitment: PropTypes.object,
 };
 
@@ -107,6 +115,7 @@ const BerkeleyTime = ({data}) => {
       about={frontmatter.about}
       features={frontmatter.features}
       team={frontmatter.team}
+      tech={frontmatter.tech}
       recruitment={frontmatter.recruitment}
     />
   );
@@ -152,6 +161,13 @@ export const berkeleyTimeQuery = graphql`
           roles {
             heading
             description
+          }
+        }
+        tech {
+          title
+          description
+          images {
+            imgUrl
           }
         }
         recruitment {

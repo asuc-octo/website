@@ -1,5 +1,8 @@
 .hero-berkeleyTime.hero
 {
+
+  height: 210px;
+
   &-backgroundImage
   {
     background: -webkit-linear-gradient(left, #546bdb, #45b23f);
@@ -22,7 +25,7 @@
     &-subtitle
     {
       color: white;
-      margin: 1rem 0;
+      //margin: 1rem 0;
       max-width: 400px;
     }
   }

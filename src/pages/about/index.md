@@ -30,9 +30,6 @@ team:
     - name: Will Wang
       position: Advisor
       imgUrl: /img/people/will-wang.jpg
-    - name: Richard Liu
-      position: Advisor
-      imgUrl: /img/people/richard-liu.jpg
     - name: Sang Cho
       position: Backend Lead
       imgUrl: /img/people/sang-cho.jpg
@@ -42,9 +39,6 @@ team:
     - name: Jemma Kwak
       position: Design Lead and Social Chair
       imgUrl: /img/people/jemma-kwak.jpg
-    - name: Evelyn Li
-      position: Backend Engineer
-      imgUrl: /img/people/evelyn-li.jpg
     - name: Sean Meng
       position: Backend Engineer
       imgUrl: /img/people/sean-meng.jpg
@@ -54,9 +48,6 @@ team:
     - name: Anson Tsai
       position: Backend Engineer
       imgUrl: /img/people/anson-tsai.jpg
-    - name: Mary Liu
-      position: Backend Engineer
-      imgUrl: /img/people/mary-liu.jpg
     - name: Hannah Yan
       position: Backend Engineer
       imgUrl: /img/people/hannah-yan.jpg
@@ -160,22 +151,28 @@ team:
     title: Where We've Gone
     brands:
     - imgUrl: /img/companies/google.png
-    - imgUrl: /img/companies/airbnb.png
     - imgUrl: /img/companies/apple.png
     - imgUrl: /img/companies/amazon.png
     - imgUrl: /img/companies/microsoft.png
     - imgUrl: /img/companies/facebook.png
+    - imgUrl: /img/companies/airbnb.png
     - imgUrl: /img/companies/twitter.png
-    - imgUrl: /img/companies/tesla.png
     - imgUrl: /img/companies/uber.png
     - imgUrl: /img/companies/lyft.png
-    - imgUrl: /img/companies/intel.png
     - imgUrl: /img/companies/salesforce.png
     - imgUrl: /img/companies/databricks.png
     - imgUrl: /img/companies/palantir.png
     - imgUrl: /img/companies/adobe.png
+    - imgUrl: /img/companies/flexport.jpeg
+    - imgUrl: /img/companies/stripe.png
+    - imgUrl: /img/companies/linkedin.png
+    - imgUrl: /img/companies/rubrik.png
+    - imgUrl: /img/companies/2sigma.png
+    - imgUrl: /img/companies/intel.png
+    - imgUrl: /img/companies/tesla.png
     - imgUrl: /img/companies/yelp.png
     - imgUrl: /img/companies/docusign.png
+    - imgUrl: /img/companies/workday.png
     - imgUrl: /img/companies/affirm.png
     - imgUrl: /img/companies/goldman.png
 ---

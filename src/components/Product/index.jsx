@@ -12,7 +12,7 @@ const Product = ({
   linkUrl,
   columnSize,
 }) => {
-  if (linkUrl !== "/") {
+  if (linkUrl && linkUrl !== "/") {
     return (
       <div className={'column is-' + columnSize}>
         <div className='product'>
