@@ -1,0 +1,10 @@
+//Common styles
+@import "../common/styles.scss";
+
+//Local Styles
+.apply
+{
+  @import "./mixins";
+  @import "./module";
+  @import "./theme";
+}

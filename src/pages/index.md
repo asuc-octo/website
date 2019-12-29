@@ -11,7 +11,7 @@ hero:
   - text: Learn more
     linkUrl: /about
   - text: Recruitment
-    linkUrl: /
+    linkUrl: /apply
 promo:
   title: What We Do
   description: >-

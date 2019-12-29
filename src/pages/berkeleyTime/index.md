@@ -58,5 +58,5 @@ recruitment:
   description: >-
     Interested in backend & infrastructure development, frontend development, product management or design? The Berkeleytime team recruits every Fall semester! Click below to see our recruitment timeline.
   linkText: Recruitment Process
-  linkTo: /
+  linkTo: /apply
 ---

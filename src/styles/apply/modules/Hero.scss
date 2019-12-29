@@ -1,0 +1,35 @@
+.hero-apply.hero
+{
+
+  &-backgroundImage
+  {
+    background: -webkit-linear-gradient(left, #546bdb, #45b23f);
+    background: -o-linear-gradient(left, #546bdb, #45b23f);
+    background: linear-gradient(to right, #546bdb, #45b23f);
+  }
+
+  .hero
+  {
+    color: white;
+
+    &-container
+    {
+      margin-bottom: 0;
+    }
+
+    &-title
+    {
+      @extend .Heading;
+      @extend .Heading--h1;
+
+      color: white;
+    }
+
+    &-subtitle
+    {
+      color: white;
+      //margin: 1rem 0;
+    }
+  }
+
+}

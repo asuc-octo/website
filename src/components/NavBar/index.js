@@ -23,6 +23,9 @@ const NavBar = ({ className }) => {
             <Link className='navbar-item' to='/projects'>
               Projects
             </Link>
+            <Link className='navbar-item' to='/apply'>
+              Apply
+            </Link>
           </div>
         </div>
       </div>

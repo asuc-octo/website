@@ -168,6 +168,7 @@ team:
     - imgUrl: /img/companies/linkedin.png
     - imgUrl: /img/companies/rubrik.png
     - imgUrl: /img/companies/2sigma.png
+    - imgUrl: /img/companies/janestreet.png
     - imgUrl: /img/companies/intel.png
     - imgUrl: /img/companies/tesla.png
     - imgUrl: /img/companies/yelp.png
