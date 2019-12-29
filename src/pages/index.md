@@ -19,7 +19,7 @@ promo:
 
 
     As a full-fledged division of the ASUC with over 30 talented members, we work to improve the campus experience for everybody. Our team works on everything from Android, iOS, and back-end development to marketing and product management.
-  image: /img/what-we-do.png
+  image: /img/misc/what-we-do.png
   linkText: Meet Our Team
   linkTo: /about
 products:
@@ -32,17 +32,17 @@ products:
     - title: BerkeleyTime
       description: >-
         Berkeley's most popular course catalog
-      imgUrl: /img/berkeleytime.jpg
+      imgUrl: /img/misc/berkeleytime.jpg
       linkUrl: /
     - title: Berkeley Mobile
       description: >-
         Berkeley's official student-created mobile app
-      imgUrl: /img/berkeley-mobile.jpg
+      imgUrl: /img/misc/berkeley-mobile.jpg
       linkUrl: /
     - title: Beehive
       description: >-
         Berkeley's undergraduate research opportunity platform
-      imgUrl: /img/beehive.jpg
+      imgUrl: /img/misc/beehive.jpg
       linkUrl: /
 about:
   title: Join Us

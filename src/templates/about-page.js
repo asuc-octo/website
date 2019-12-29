@@ -48,28 +48,28 @@ class AboutPageTemplate extends Component {
           baseClass={baseClass}
           title={this.props.team.chief.title}
           profiles={this.props.team.chief.members}
-          profileColSize='one-third'
+          profileColSize='one-quarter'
         />
 
         <Profiles
           baseClass={baseClass}
           title={this.props.team.berkeleyTime.title}
           profiles={this.props.team.berkeleyTime.members}
-          profileColSize='one-third'
+          profileColSize='one-fifth'
         />
 
         <Profiles
           baseClass={baseClass}
           title={this.props.team.berkeleyMobile.title}
           profiles={this.props.team.berkeleyMobile.members}
-          profileColSize='one-third'
+          profileColSize='one-fifth'
         />
 
         <Profiles
           baseClass={baseClass}
           title={this.props.team.beehive.title}
           profiles={this.props.team.beehive.members}
-          profileColSize='one-third'
+          profileColSize='one-fifth'
         />
 
         <Profiles
@@ -77,7 +77,7 @@ class AboutPageTemplate extends Component {
           classModifier='companies'
           title={this.props.team.companies.title}
           profiles={this.props.team.companies.brands}
-          profileColSize='one-third'
+          profileColSize='one-fifth'
         />
 
       </div>
