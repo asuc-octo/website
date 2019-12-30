@@ -10,181 +10,170 @@ mission:
   description: The ASUC Office of the Chief Technology Officer was founded in the spring of 2014 to address the critical need for student voices in rapidly changing campus technology spaces through advocacy, awareness, and actual technology product development.
 team:
   chief:
-    title: Our Board
+    title: Leadership
     members:
     - name: Leon Ming
-      position: Chief Technology Officer and Beehive PM
-      imgUrl: /img/leon-ming.jpg
+      position: Chief Technology Officer
+      imgUrl: /img/people/leon-ming.jpg
     - name: Richard Liu
       position: Chief of Staff
-      imgUrl: /img/richard-liu.jpg
+      imgUrl: /img/people/richard-liu.jpg
     - name: Grace Luo
       position: Chief of Staff
-      imgUrl: /img/grace-luo.jpg
-    - name: Michael Li
-      position: BerkeleyTime PM
-      imgUrl: /img/michael-li.jpg
-    - name: Sid Karia
-      position: Berkeley Mobile PM
-      imgUrl: /img/sid-karia.jpg
-    - name: Sudarshan Gopal
-      position: Berkeley Mobile PM
-      imgUrl: /img/sudarshan-gopal.jpg
+      imgUrl: /img/people/grace-luo.jpg
   berkeleyTime:
     title: BerkeleyTime
     members:
     - name: Michael Li
       position: Product Manager
-      imgUrl: /img/michael-li.jpg
+      imgUrl: /img/people/michael-li.jpg
     - name: Will Wang
       position: Advisor
-      imgUrl: /img/will-wang.jpg
-    - name: Richard Liu
-      position: Advisor
-      imgUrl: /img/richard-liu.jpg
+      imgUrl: /img/people/will-wang.jpg
     - name: Sang Cho
       position: Backend Lead
-      imgUrl: /img/sang-cho.jpg
+      imgUrl: /img/people/sang-cho.jpg
     - name: Chris Liu
       position: Frontend Lead
-      imgUrl: /img/chris-liu.jpg
+      imgUrl: /img/people/chris-liu.jpg
     - name: Jemma Kwak
       position: Design Lead and Social Chair
-      imgUrl: /img/jemma-kwak.jpg
-    - name: Evelyn Li
-      position: Backend Engineer
-      imgUrl: /img/evelyn-li.jpg
+      imgUrl: /img/people/jemma-kwak.jpg
     - name: Sean Meng
       position: Backend Engineer
-      imgUrl: /img/sean-meng.jpg
+      imgUrl: /img/people/sean-meng.jpg
     - name: Eli Wu
       position: Backend Engineer & Bartending Lead
-      imgUrl: /img/eli-wu.jpg
+      imgUrl: /img/people/eli-wu.jpg
     - name: Anson Tsai
       position: Backend Engineer
-      imgUrl: /img/anson-tsai.jpg
-    - name: Mary Liu
-      position: Backend Engineer
-      imgUrl: /img/mary-liu.jpg
+      imgUrl: /img/people/anson-tsai.jpg
     - name: Hannah Yan
       position: Backend Engineer
-      imgUrl: /img/hannah-yan.jpg
+      imgUrl: /img/people/hannah-yan.jpg
     - name: Grace Luo
       position: Frontend Engineer
-      imgUrl: /img/grace-luo.jpg
+      imgUrl: /img/people/grace-luo.jpg
     - name: Chloe Liu
       position: Frontend Engineer
-      imgUrl: /img/chloe-liu.jpg
+      imgUrl: /img/people/chloe-liu.jpg
     - name: Christina Shao
       position: Frontend Engineer
-      imgUrl: /img/christina-shao.jpg
+      imgUrl: /img/people/christina-shao.jpg
     - name: Janet Xu
       position: Designer
-      imgUrl: /img/janet-xu.jpg
+      imgUrl: /img/people/janet-xu.jpg
     - name: Annie Pan
       position: Designer
-      imgUrl: /img/annie-pan.png
+      imgUrl: /img/people/annie-pan.png
   berkeleyMobile:
     title: Berkeley Mobile
     members:
     - name: Sid Karia
       position: Product Manager
-      imgUrl: /img/sid-karia.jpg
+      imgUrl: /img/people/sid-karia.jpg
     - name: Sudarshan Gopal
       position: Product Manager
-      imgUrl: /img/sudarshan-gopal.jpg
+      imgUrl: /img/people/sudarshan-gopal.jpg
     - name: Rustie Lin
       position: Advisor
-      imgUrl: /img/rustie-lin.jpg
+      imgUrl: /img/people/rustie-lin.jpg
     - name: Yiling Kao
       position: Advisor
-      imgUrl: /img/yiling-kao.jpg
+      imgUrl: /img/people/yiling-kao.jpg
     - name: Tom Cheah
       position: Backend Engineer
-      imgUrl: /img/tom-cheah.jpg
+      imgUrl: /img/people/tom-cheah.jpg
     - name: Kevin Liu
       position: Backend Engineer
-      imgUrl: /img/kevin-liu.jpg
+      imgUrl: /img/people/kevin-liu.jpg
     - name: RJ Pimentel
       position: iOS Lead
-      imgUrl: /img/rj-pimentel.jpg
+      imgUrl: /img/people/rj-pimentel.jpg
     - name: Kevin Hu
       position: iOS Engineer
-      imgUrl: /img/user.png
+      imgUrl: /img/misc/user.png
     - name: Anna Gao
       position: iOS Engineer
-      imgUrl: /img/anna-gao.jpg
+      imgUrl: /img/people/anna-gao.jpg
     - name: Oscar Bjorkman
       position: iOS Engineer
-      imgUrl: /img/oscar-bjorkman.jpg
+      imgUrl: /img/people/oscar-bjorkman.jpg
     - name: Anny Yang
       position: Android Engineer
-      imgUrl: /img/anny-yang.jpg
+      imgUrl: /img/people/anny-yang.jpg
     - name: Alex Kwon
       position: Android Engineer
-      imgUrl: /img/alex-kwon.jpg
+      imgUrl: /img/people/alex-kwon.jpg
     - name: Akshat Jain
       position: Frontend Engineer
-      imgUrl: /img/akshat-jain.jpg
+      imgUrl: /img/people/akshat-jain.jpg
     - name: Marleah Puckett
       position: Designer
-      imgUrl: /img/marleah-puckett.jpg
+      imgUrl: /img/people/marleah-puckett.jpg
     - name: Jacqueline Angelina
       position: Designer
-      imgUrl: /img/jacqueline-angelina.jpg
+      imgUrl: /img/people/jacqueline-angelina.jpg
   beehive:
     title: Beehive
     members:
     - name: Leon Ming
       position: Product Manager
-      imgUrl: /img/leon-ming.jpg
+      imgUrl: /img/people/leon-ming.jpg
     - name: Rick Zhang
       position: Software Engineer
-      imgUrl: /img/rick-zhang.jpg
+      imgUrl: /img/people/rick-zhang.jpg
     - name: Kaitlyn Gunadhi
       position: Software Engineer
-      imgUrl: /img/kaitlyn-gunadhi.jpg
+      imgUrl: /img/people/kaitlyn-gunadhi.jpg
     - name: Joshua Yang
       position: Software Engineer
-      imgUrl: /img/joshua-yang.jpg
+      imgUrl: /img/people/joshua-yang.jpg
     - name: Aakash Shukla
       position: Software Engineer
-      imgUrl: /img/aakash-shukla.jpg
+      imgUrl: /img/people/aakash-shukla.jpg
     - name: Atharva Patil
       position: Software Engineer
-      imgUrl: /img/atharva-patil.jpg
+      imgUrl: /img/people/atharva-patil.jpg
     - name: Anik Gupta
       position: Software Engineer
-      imgUrl: /img/anik-gupta.jpg
+      imgUrl: /img/people/anik-gupta.jpg
     - name: Willy Wu
       position: Marketing Lead
-      imgUrl: /img/willy-wu.jpg
+      imgUrl: /img/people/willy-wu.jpg
     - name: Evelyn Wong
       position: Marketing Associate
-      imgUrl: /img/evelyn-wong.jpg
+      imgUrl: /img/people/evelyn-wong.jpg
     - name: Atharva Mehendale
       position: Design Lead
-      imgUrl: /img/atharva-mehendale.jpg
+      imgUrl: /img/people/atharva-mehendale.jpg
   companies:
     title: Where We've Gone
     brands:
-    - imgUrl: /img/google.png
-    - imgUrl: /img/airbnb.png
-    - imgUrl: /img/apple.png
-    - imgUrl: /img/amazon.png
-    - imgUrl: /img/microsoft.png
-    - imgUrl: /img/facebook.png
-    - imgUrl: /img/twitter.png
-    - imgUrl: /img/tesla.png
-    - imgUrl: /img/uber.png
-    - imgUrl: /img/lyft.png
-    - imgUrl: /img/intel.png
-    - imgUrl: /img/salesforce.png
-    - imgUrl: /img/databricks.png
-    - imgUrl: /img/palantir.png
-    - imgUrl: /img/adobe.png
-    - imgUrl: /img/yelp.png
-    - imgUrl: /img/docusign.png
-    - imgUrl: /img/affirm.png
-    - imgUrl: /img/goldman.png
+    - imgUrl: /img/companies/google.png
+    - imgUrl: /img/companies/apple.png
+    - imgUrl: /img/companies/amazon.png
+    - imgUrl: /img/companies/microsoft.png
+    - imgUrl: /img/companies/facebook.png
+    - imgUrl: /img/companies/airbnb.png
+    - imgUrl: /img/companies/twitter.png
+    - imgUrl: /img/companies/uber.png
+    - imgUrl: /img/companies/lyft.png
+    - imgUrl: /img/companies/salesforce.png
+    - imgUrl: /img/companies/databricks.png
+    - imgUrl: /img/companies/palantir.png
+    - imgUrl: /img/companies/adobe.png
+    - imgUrl: /img/companies/flexport.jpeg
+    - imgUrl: /img/companies/stripe.png
+    - imgUrl: /img/companies/linkedin.png
+    - imgUrl: /img/companies/rubrik.png
+    - imgUrl: /img/companies/2sigma.png
+    - imgUrl: /img/companies/janestreet.png
+    - imgUrl: /img/companies/intel.png
+    - imgUrl: /img/companies/tesla.png
+    - imgUrl: /img/companies/yelp.png
+    - imgUrl: /img/companies/docusign.png
+    - imgUrl: /img/companies/workday.png
+    - imgUrl: /img/companies/affirm.png
+    - imgUrl: /img/companies/goldman.png
 ---

@@ -12,21 +12,21 @@ projects:
     - title: BerkeleyTime
       description: >-
         Berkeley’s most popular online course catalog web app.
-      imgUrl: /img/berkeleytime.jpg
-      linkUrl: /
+      imgUrl: /img/berkeleytime/berkeleytime.jpg
+      linkUrl: /berkeleytime
     - title: Berkeley Mobile
       description: >-
         Berkeley’s official student-created mobile app.
-      imgUrl: /img/berkeley-mobile.jpg
+      imgUrl: /img/misc/berkeley-mobile.jpg
       linkUrl: /
     - title: Beehive
       description: >-
         Berkeley's undergraduate research opportunity platform.
-      imgUrl: /img/beehive.jpg
+      imgUrl: /img/misc/beehive.jpg
       linkUrl: /
     - title: Coming Soon
       description: >-
         OCTO is always working on new projects, stay tuned!
-      imgUrl: /img/coming-soon.jpg
+      imgUrl: /img/misc/coming-soon.jpg
       linkUrl: /
 ---

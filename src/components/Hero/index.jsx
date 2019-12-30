@@ -26,7 +26,7 @@ const Hero = ({
             </h1>
           </div>
           <div className='columns'>
-            <h2 className='hero-subtitle subtitle column is-one-third'>
+            <h2 className='hero-subtitle subtitle column is-5'>
               {subtitle}
             </h2>
           </div>

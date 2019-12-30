@@ -1,19 +1,18 @@
-.products-berkeleyTime.products
+.about-apply.about
 {
-  .products
+  .about
   {
     &-title
     {
       @extend .Heading;
       @extend .Heading--h1;
-
     }
 
     &-description
     {
       white-space: pre-line;
-      margin-bottom: $spaced-margin * 2;
 
+      margin-bottom: $spaced-margin * 2;
     }
 
     &-linkWrapper
@@ -26,6 +25,7 @@
     {
       @extend .Button;
       @extend .Button--inverted;
+      font-size: 20pt;
     }
   }
 }

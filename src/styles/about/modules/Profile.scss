@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $padded-padding * 2;
+  padding: $padded-padding;
 
   .profile
   {
     &-image
     {
-      width: 150px;
-      height: 150px;
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -25,6 +25,7 @@
     &-position
     {
       text-align: center;
+      line-height: 24pt;
     }
   }
 }

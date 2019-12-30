@@ -1,7 +1,5 @@
-.hero-berkeleyTime.hero
+.hero-apply.hero
 {
-
-  height: 210px;
 
   &-backgroundImage
   {
@@ -13,6 +11,11 @@
   .hero
   {
     color: white;
+
+    &-container
+    {
+      margin-bottom: 0;
+    }
 
     &-title
     {
@@ -26,7 +29,6 @@
     {
       color: white;
       //margin: 1rem 0;
-      max-width: 400px;
     }
   }
 
