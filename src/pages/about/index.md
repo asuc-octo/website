@@ -171,6 +171,7 @@ team:
     - imgUrl: /img/companies/janestreet.png
     - imgUrl: /img/companies/intel.png
     - imgUrl: /img/companies/tesla.png
+    - imgUrl: /img/companies/blend.png
     - imgUrl: /img/companies/yelp.png
     - imgUrl: /img/companies/docusign.png
     - imgUrl: /img/companies/workday.png
