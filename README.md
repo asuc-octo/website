@@ -1,4 +1,5 @@
 # OCTO Website
+This was the v1.0 site hosted from 2018-2020.
 
 ### Installing Gatsby-CLI
 ```
